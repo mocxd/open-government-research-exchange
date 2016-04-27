@@ -33,14 +33,20 @@
 
     &:hover {
       transition: all .4s ease;
-      box-shadow: 0 0 20px rgba($black, .2);
-      position: relative;
-      z-index: 10;
-      background-color: $white;
 
-      &:nth-of-type(3n + 1):hover { transform: scale(1.1) translate(4.5%); }
-      &:nth-of-type(3n + 2):hover { transform: scale(1.1); }
-      &:nth-of-type(3n):hover { transform: scale(1.1) translate(-4.5%); }
+      &:after {
+        border-top: 12px solid $main-color;
+        border-left: 12px solid $main-color;
+      }
+
+      // box-shadow: 0 0 20px rgba($black, .2);
+      // position: relative;
+      // z-index: 10;
+      // background-color: $white;
+
+      // &:nth-of-type(3n + 1):hover { transform: scale(1.1) translate(4.5%); }
+      // &:nth-of-type(3n + 2):hover { transform: scale(1.1); }
+      // &:nth-of-type(3n):hover { transform: scale(1.1) translate(-4.5%); }
     }  
   }
 
