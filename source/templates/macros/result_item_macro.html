@@ -89,11 +89,11 @@
       {% endif %}
 
       <div class="e-result-extras m-{{paper.organization | slug }}">
-        {% if paper.organization == "the-govlab" %}
+        {% if paper.organization | slug == "the-govlab" %}
           <img class="e-organization-logo" src="img/organizations/govlab-logo-white.png" alt="The GovLab">
-        {% elif paper.organization == "mysociety" %}
+        {% elif paper.organization | slug == "mysociety" %}
           <img class="e-organization-logo" src="img/organizations/mysociety-logo-white.png" alt="mySociety">
-        {% elif paper.organization == "world-bank-digital-engagement-evaluation-team" %}
+        {% elif paper.organization | slug == "world-bank-digital-engagement-evaluation-team" %}
           <img class="e-organization-logo" src="img/organizations/deet-logo-white.png" alt="Digital Engagement Evaluation Team">
         {% endif %}
 
