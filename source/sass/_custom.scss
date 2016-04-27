@@ -8,6 +8,15 @@ body {
 
 }
 
+.b-top-nav {
+  .e-logo {
+    em {
+      font-weight: 100;
+      
+    }
+  }
+}
+
 .b-search-page {
 
 }
@@ -149,8 +158,17 @@ body {
 
 
 .b-partner-organizations {
+  &.m-disabled {
+    .e-org-logo {
+      pointer-events: none;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: .4;
+    }
+  }
+
   .e-org-logo {
-    padding: 40px;
+    padding: 50px;
     text-align: center;
 
     &.m-ogp {
