@@ -88,14 +88,17 @@
       </div>
       {% endif %}
 
-      <div class="e-result-extras m-{{paper.organization | slug }}">
-        {% if paper.organization | slug == "the-govlab" %}
+      <div class="e-result-extras {% for org in paper.organization %}m-{{ org | slug }} {% endfor%}">
+      {%for org in paper.organization %}
+        {% if org | slug == "the-govlab" %}
           <img class="e-organization-logo" src="img/organizations/govlab-logo-white.png" alt="The GovLab">
+          {# {% endif %} #}
         {% elif paper.organization | slug == "mysociety" %}
           <img class="e-organization-logo" src="img/organizations/mysociety-logo-white.png" alt="mySociety">
         {% elif paper.organization | slug == "world-bank-digital-engagement-evaluation-team" %}
           <img class="e-organization-logo" src="img/organizations/deet-logo-white.png" alt="Digital Engagement Evaluation Team">
         {% endif %}
+        {% endfor %}
 
         {% if paper.github %} <a href="{{paper.github}}" target="_blank"><img class="e-github-logo" src="img/github-logo.svg" alt="GitHub"></a> {% endif %}
         {% if paper.datasets %} <a href="{{paper.datasets}}" target="_blank"><i class="material-icons" title="Datasets">file_download</i></a>{% endif %}
