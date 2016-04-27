@@ -7578,6 +7578,9 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     font-weight: 600;
     font-size: 1.3rem; }
 
+.b-top-nav .e-logo em {
+  font-weight: 100; }
+
 .b-search-results {
   padding: 0; }
 
@@ -7686,8 +7689,14 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
 .e-list-item.m-labs-and-experimentation {
   background-color: #dbc048 !important; }
 
+.b-partner-organizations.m-disabled .e-org-logo {
+  pointer-events: none;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: .4; }
+
 .b-partner-organizations .e-org-logo {
-  padding: 40px;
+  padding: 50px;
   text-align: center; }
   .b-partner-organizations .e-org-logo.m-ogp {
     padding: 0 30px; }
