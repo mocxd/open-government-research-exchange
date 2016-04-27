@@ -160,5 +160,8 @@ body {
   margin: 0.75% 0;
 }
 .footer-links{
-  
+  text-decoration: none;
+}
+.footer-links:hover, #submit-button:hover{
+  color: $yellow;
 }
