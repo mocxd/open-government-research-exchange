@@ -45,22 +45,40 @@
     <div class="b-divider b-filter-panel m-black">
       <div class="b-filter-ui js-and">
         <h2>Articles</h2>
+{#       {% for d in $global.papers %}
+      {%for org in d.organization%}
+        {% if org | slug == title | slug}} %}
+          {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
+        {% endif %}
+        {%endfor%}
+      {%endfor%} #}
       </div>
     </div>
 
     {# List of Articles #}
     <div class="b-page-section b-results-section b-isotope">
-      {% for d in $global.papers %}
-        {% if d.organization | slug == title|slug %}
 
-          {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
+    {% for d in $global.papers %}
 
-        {% elif custom_filter and d.organization | slug == custom_filter %}
+      {% if custom_filter and d.organization | slug == custom_filter %}
+        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
 
-          {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
+      {% else %}
 
-        {% endif %}
+    {% for org in d.organization %}
+      {% if org | slug == title | slug %}
+        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
+      {% endif %}
       {% endfor %}
+
+
+      {% endif %}
+
+    {% endfor %}
+
+
+
+
     </div>
   </div>
 {% endblock %}
