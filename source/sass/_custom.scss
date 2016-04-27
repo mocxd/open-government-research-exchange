@@ -129,6 +129,25 @@ body {
   &.m-labs-and-experimentation {background-color: $labs-and-experimentation !important;}
 }
 
+.b-partner-organizations {
+  .e-org-logo {
+    padding: 40px;
+    text-align: center;
+
+    &.m-ogp {
+      padding: 0 30px;
+    }
+
+    img {
+      max-height: 150px;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+
+
 
 .b-footer {
   h4 {
