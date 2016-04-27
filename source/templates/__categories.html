@@ -27,41 +27,44 @@
         <div class="column large-8 large-offset-2">
           <form action="" class="b-search m-main-search m-negative lunr-form" id="lunr-filter-form">
             <input id="lunr-filter" type="text" placeholder="Search" data-category="{{custom_filter | slug }}" /><!--
-           --><input class="e-search-trigger material-icons" type="submit" value="search">
-          </form>
-
-        </div>
-      </div>
-    </div>
-    <div class="b-divider b-filter-panel m-black">
-
-
-
-      <h2>Filters</h2>
-
-
-      <div class="row">
-        <form action="#" class="b-form">
-
-          {{ $macros.filterDropdown($global.papers, "Organization", custom_filter, 1) }}
-          {{ $macros.filterDropdown($global.papers, "Objective", custom_filter, 2, "taxonomy") }}
-          {{ $macros.filterDropdown($global.papers, "Methodology", custom_filter, 3, "taxonomy") }}
-          {{ $macros.filterDropdown($global.papers, "Sector", custom_filter, 4) }}
-          {{ $macros.filterDropdown($global.papers, "Region", custom_filter, 5) }}
-          {{ $macros.filterDropdown($global.papers, "Type", custom_filter, 6) }}
-
+          --><input class="e-search-trigger material-icons" type="submit" value="search">
         </form>
-      </div>
-      <div class="row">
-        <form action="#" class="b-form">
-          <a class="b-button" id="clear-filter-btn">Clear Filters</a>
-        </form>
+
       </div>
     </div>
   </div>
+  <div class="b-divider b-filter-panel m-black">
 
-    <div class="b-page-section b-results-section b-isotope">
-    {% for d in $global.papers %}
+
+
+    <h2>Filters</h2>
+
+
+    <div class="row">
+      <form action="#" class="b-form">
+
+        <div class="large-12 columns">
+          {{ $macros.filterDropdown($global.papers, "Organization", custom_filter, 2, 1) }}
+          {{ $macros.filterDropdown($global.papers, "Objective", custom_filter, 2, 2, "taxonomy") }}
+          {{ $macros.filterDropdown($global.papers, "Methodology", custom_filter, 2, 3, "taxonomy") }}
+          {{ $macros.filterDropdown($global.papers, "Sector", custom_filter, 2, 4) }}
+          {{ $macros.filterDropdown($global.papers, "Region", custom_filter, 2, 5) }}
+          {{ $macros.filterDropdown($global.papers, "Type", custom_filter, 1, 6) }}
+          {{ $macros.filterDropdown($global.papers, "Tools", custom_filter, 1, 7) }}
+        </div>
+
+      </form>
+    </div>
+    <div class="row">
+      <form action="#" class="b-form">
+        <a class="b-button" id="clear-filter-btn">Clear Filters</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="b-page-section b-results-section b-isotope">
+  {% for d in $global.papers %}
 
       {%- set _match = false -%}
       {%- for i in d.taxonomy.category -%}
@@ -77,7 +80,7 @@
               {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools, $global.categories)}}
       {%endif%}
 
-    {% endfor %}
-    </div>
-  </div>
-  {% endblock %}
+  {% endfor %}
+</div>
+</div>
+{% endblock %}
