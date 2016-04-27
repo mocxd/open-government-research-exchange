@@ -14,7 +14,7 @@ option { color: $black; }
   .e-logo {
     em {
       font-weight: 100;
-      
+
     }
   }
 }
@@ -87,7 +87,7 @@ option { color: $black; }
 
     .e-index-item {
       padding: 5px 10px;
-      display: inline-block;  
+      display: inline-block;
       font-size: 1.2rem;
 
       &:hover {
@@ -229,4 +229,9 @@ option { color: $black; }
 
 .footer-links:hover, #submit-button:hover{
   color: $yellow;
+}
+
+.b-main-menu .m-disabled {
+  opacity: .5;
+  pointer-events: none;
 }
