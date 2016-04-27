@@ -7733,3 +7733,7 @@ option {
 
 .footer-links:hover, #submit-button:hover {
   color: #d9be5b; }
+
+.b-main-menu .m-disabled {
+  opacity: .5;
+  pointer-events: none; }
