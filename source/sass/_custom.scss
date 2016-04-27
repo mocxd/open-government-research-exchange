@@ -183,7 +183,15 @@ body {
 }
 
 
+.b-divider.m-light {
+  color: rgba($black, .5);
+  background-color: rgba($black, .1);
 
+  h1 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+}
 
 
 .b-footer {
