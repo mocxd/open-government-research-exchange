@@ -1,18 +1,16 @@
-{%- macro filterDropdown(data, field, category, num=1, prefix=false) -%}
+{%- macro filterDropdown(data, field, category, cols, num=1, prefix=false) -%}
   {%- set results = [] -%}
   {%- for d in data -%}
      {%- set results = results | pushallnew(d, field, category, prefix) -%}
   {%- endfor -%}
-  <div class="b-filter-ui-container">
-    <div class="large-2 columns">
-      <div class="e-select">
-        <select name="" id="filter-{{field | slug}}" class="b-filter js-change" {% if results | length == 0 %}disabled{% endif %}>
-          <option data-filter="{% for n in range(num) %}*{% endfor %}">{{field}}</option>
-          {% for r in results -%}
-            <option data-filter="f-{{r | slug}}">{{r}}</option>
-          {%- endfor %}
-        </select>
-      </div>
+  <div class="b-filter-ui-container" style="display: inline-block; width: 150px">
+    <div class="e-select">
+      <select name="" id="filter-{{field | slug}}" class="b-filter js-change" {% if results | length == 0 %}disabled{% endif %}>
+        <option data-filter="{% for n in range(num) %}*{% endfor %}">{{field}}</option>
+        {% for r in results -%}
+        <option data-filter="f-{{r | slug}}">{{r}}</option>
+        {%- endfor %}
+      </select>
     </div>
   </div>
 {%- endmacro -%}
