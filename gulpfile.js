@@ -41,7 +41,7 @@ var cliOptions = {
 var COL_NAME_MAP = {
   'Publication Name'      : 'title',
   'Open vs. Closed Access': 'access',
-  'Organization'          : 'organization',
+  'Organization'          : {value:'organization', children : ['*'], delimiter : ','},
   'Authors'               : { value : 'authors', children : ['*'], delimiter : ',' },
   'Image or Screenshot'   : 'cover_image',
   'Published On'          : 'paper_date',
