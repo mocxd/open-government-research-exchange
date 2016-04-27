@@ -4581,6 +4581,7 @@ Styleguide 1.2
   right: 0;
   z-index: 10;
   display: none;
+  background-color: red;
   opacity: .1; }
   #overlay.m-active {
     display: block; }
@@ -7671,6 +7672,15 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
 .e-list-item.m-labs-and-experimentation {
   background-color: #dbc048 !important; }
 
+.b-partner-organizations .e-org-logo {
+  padding: 40px;
+  text-align: center; }
+  .b-partner-organizations .e-org-logo.m-ogp {
+    padding: 0 30px; }
+  .b-partner-organizations .e-org-logo img {
+    max-height: 150px;
+    margin: 0 auto; }
+
 .b-footer h4 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -7689,3 +7699,9 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
   margin: 15px; }
   .b-footer .e-partner-logo.m-deet {
     width: 180px; }
+
+#submit-button {
+  margin: 0.75% 0; }
+
+.footer-links:hover, #submit-button:hover {
+  color: #d9be5b; }
