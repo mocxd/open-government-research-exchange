@@ -45,13 +45,6 @@
     <div class="b-divider b-filter-panel m-black">
       <div class="b-filter-ui js-and">
         <h2>Articles</h2>
-{#       {% for d in $global.papers %}
-      {%for org in d.organization%}
-        {% if org | slug == title | slug}} %}
-          {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
-        {% endif %}
-        {%endfor%}
-      {%endfor%} #}
       </div>
     </div>
 
