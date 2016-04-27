@@ -7538,6 +7538,10 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     padding-top: 30px;
     text-align: center; }
 
+.b-author-page .b-top-section .e-extras {
+  text-align: left;
+  padding-top: 10px; }
+
 .b-author-page .e-author-picture {
   width: 300px;
   height: 300px;
@@ -7616,6 +7620,16 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
 
 .b-all-categories-list {
   padding: 0; }
+  .b-all-categories-list .e-index {
+    text-align: center;
+    padding-bottom: 30px; }
+    .b-all-categories-list .e-index .e-index-item {
+      padding: 5px 10px;
+      display: inline-block;
+      font-size: 1.2rem; }
+      .b-all-categories-list .e-index .e-index-item:hover {
+        text-decoration: none;
+        background-color: rgba(51, 51, 51, 0.1); }
   .b-all-categories-list .e-list-item {
     padding: 40px 0;
     text-align: center;
