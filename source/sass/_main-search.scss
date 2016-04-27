@@ -2,18 +2,22 @@
     input[type="text"] {
     padding: 28px;
     font-size: 24px;
-    width: calc(100% - 60px);  
+    width: calc(100% - 60px);
     max-width: 100%;
-    
+
 
     &:focus {
       background-color: rgba($white, .3);
     }
   }
 
-  input[type="submit"] {
+  input[type="submit"], input[type="button"] {
     padding: 17px;
     background-color: rgba($white, .2);
+  }
+
+  input[type="button"] {
+    padding: 16px 17px;
   }
 
   input[type="text"]:focus ~ input[type="submit"] {
@@ -27,19 +31,19 @@
 
   :-moz-placeholder { /* Firefox 18- */
      color: rgba($white, .3);
-     text-align: left;  
+     text-align: left;
   }
 
   ::-moz-placeholder {  /* Firefox 19+ */
      color: rgba($white, .3);
-     text-align: left;  
+     text-align: left;
   }
 
-  :-ms-input-placeholder {  
+  :-ms-input-placeholder {
      color: rgba($white, .3);
-     text-align: left;  
+     text-align: left;
   }
-  
+
 }
 
 .b-main-search-section {
