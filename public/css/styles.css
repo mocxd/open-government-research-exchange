@@ -7316,17 +7316,10 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
       width: calc(100% / 3);
       margin: 0 -2px; }
       .b-result-item:hover {
-        transition: all .4s ease;
-        box-shadow: 0 0 20px rgba(51, 51, 51, 0.2);
-        position: relative;
-        z-index: 10;
-        background-color: white; }
-        .b-result-item:hover:nth-of-type(3n + 1):hover {
-          transform: scale(1.1) translate(4.5%); }
-        .b-result-item:hover:nth-of-type(3n + 2):hover {
-          transform: scale(1.1); }
-        .b-result-item:hover:nth-of-type(3n):hover {
-          transform: scale(1.1) translate(-4.5%); } }
+        transition: all .4s ease; }
+        .b-result-item:hover:after {
+          border-top: 12px solid #004f6f;
+          border-left: 12px solid #004f6f; } }
   .b-result-item:after {
     content: "";
     width: 0;
@@ -7580,6 +7573,9 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     font-weight: 600;
     font-size: 1.3rem; }
 
+option {
+  color: #333; }
+
 .b-top-nav .e-logo em {
   font-weight: 100; }
 
@@ -7639,7 +7635,7 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     padding: 40px 0;
     text-align: center;
     font-size: 1.1rem; }
-    .b-all-categories-list .e-list-item:nth-child(even) {
+    .b-all-categories-list .e-list-item:nth-of-type(even) {
       background-color: rgba(51, 51, 51, 0.03); }
 
 .b-categories-page .switch {
@@ -7705,6 +7701,13 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
   .b-partner-organizations .e-org-logo img {
     max-height: 150px;
     margin: 0 auto; }
+
+.b-divider.m-light {
+  color: rgba(51, 51, 51, 0.5);
+  background-color: rgba(51, 51, 51, 0.1); }
+  .b-divider.m-light h1 {
+    font-size: 1.2rem;
+    text-transform: uppercase; }
 
 .b-footer h4 {
   font-size: 1rem;
