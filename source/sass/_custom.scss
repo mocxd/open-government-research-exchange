@@ -142,8 +142,8 @@ body {
     a { display: block; }
   }
 
-  p, a { 
-    font-size: .9rem; 
+  p, a {
+    font-size: .9rem;
     margin: 0;
   }
 
@@ -156,4 +156,6 @@ body {
     }
   }
 }
-
+#submit-button{
+  margin: 0.75% 0;
+}
