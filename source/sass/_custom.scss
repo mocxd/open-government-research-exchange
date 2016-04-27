@@ -70,14 +70,31 @@ body {
 .b-all-categories-list {
   padding: 0;
 
+  .e-index {
+    text-align: center;
+    padding-bottom: 30px;
+
+    .e-index-item {
+      padding: 5px 10px;
+      display: inline-block;  
+      font-size: 1.2rem;
+
+      &:hover {
+        text-decoration: none;
+        background-color: rgba($black, .1);
+      }
+    }
+  }
+
   .e-list-item {
     padding: 40px 0;
     text-align: center;
     font-size: 1.1rem;
     &:nth-child(even) { background-color: rgba($black, .03); }
-
   }
+
 }
+
 
 .b-categories-page {
   .switch { text-indent: 90px; }
@@ -129,6 +146,8 @@ body {
   &.m-labs-and-experimentation {background-color: $labs-and-experimentation !important;}
 }
 
+
+
 .b-partner-organizations {
   .e-org-logo {
     padding: 40px;
@@ -175,9 +194,11 @@ body {
     }
   }
 }
-#submit-button{
+
+#submit-button {
   margin: 0.75% 0;
 }
+
 .footer-links:hover, #submit-button:hover{
   color: $yellow;
 }
