@@ -17,7 +17,7 @@
       {% for a in  custom_authors %}
         <div class="column large-4 e-list-item">
           <div class="e-picture" style="background-image: url('./img/authors/{{ a.image }}');"></div>
-          <a href="{{a.id }}-{{a.title | slug }}.html"<p class="e-name">{{a.title}}</p></a>
+          <a href="{{a.id }}-{{a.title | slug }}.html"><p class="e-name">{{a.title}}</p></a>
           <p class="e-job">{{a.job}}</p>
         </div>
       {% endfor %}
