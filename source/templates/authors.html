@@ -33,6 +33,11 @@
 
   <div class="b-page-section b-all-categories-list">
     <div class="row expanded">
+
+      <span class="b-fixed-button-trigger"></span>
+      <a name="author-list"></a>
+      <a class="b-fixed-button" href="#author-list"><i class="material-icons">arrow_upward</i></a>
+
       <div class="large-12 columns e-index">
       {% set 'alphabet' = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split("") %}
       {% for a in alphabet %}
@@ -59,4 +64,8 @@
 </div>
 
 
+{% endblock %}
+
+{% block customscripts %}
+<script src="./js/scrollbtn.js"></script>
 {% endblock %}
