@@ -21,7 +21,8 @@
     Verhulst’s latest scholarship centers on how technology can improve people’s lives and the creation of more effective and collaborative forms of governance. Specifically, he is interested in the perils and promise of collaborative technologies and how to harness the unprecedented volume of information to advance the public good.
   long_description: false
   custom_filter:
-    - Stefaan G. Verhulst # To be used as a custom filter
+    - Stefaan G. Verhulst
+    - Stefaan Verhulst # To be used as a custom filter
   social_media: # Links
     github: false
     facebook: false
@@ -34,7 +35,8 @@
   image: andrew-young.jpg
   short_description: Andrew Young is the Associate Director of Research at The GovLab, where he leads research efforts focusing on the impact of technology on public institutions. Among the grant-funded projects he has directed are a global assessment of the impact of open government data; comparative benchmarking of government innovation efforts against those of other countries; and crafting the experimental design for testing the adoption of technology innovations in federal agencies. He has written extended work on how public sector institutions use new technology to coordinate work and developed original public resources, including GovLab’s Twitter Lists of governance innovation areas and its Zotero bibliographies and Selected Readings on a variety of topics.
   long_description: false
-  custom_filter: false # To be used as a custom filter
+  custom_filter: 
+    - Andrew Young # To be used as a custom filter
   social_media: # Links
     github: false
     facebook: false
@@ -47,7 +49,8 @@
   image: tiago-peixoto.png
   short_description: Tiago Peixoto (PhD) is a Team Lead at the World Bank’s Digital Engagement Unit. Featured in TechCrunch as one of the “20 Most Innovative People in Democracy”, Tiago is an internationally recognized expert working at the intersection of technology and citizen engagement. At the World Bank his activities focus on working with governments to leverage technology-enabled participation for better public policies and services. As the lead of the Bank’s Digital Engagement Evaluation Team (DEET), he coordinates evaluation and research activities that apply cutting-edge methodologies to examine the effects of technology on participation, transparency, accountability and government responsiveness. Prior to joining the World Bank, Tiago managed projects and worked as an advisor and consultant for various organizations, such as the European Commission, OECD, United Nations, and the Brazilian and UK governments. A Research Director of the Electronic Democracy Centre at the University of Zurich and faculty member of NYU’s Governance Lab, Tiago holds a PhD and a Masters in Political Sciences from the European University Institute, as well as a Masters in Organized Collective Action from Sciences-Po Paris. He blogs at DemocracySpot.net and tweets at @participatory
   long_description: false
-  custom_filter: false # To be used as a custom filter
+  custom_filter: 
+    - Tiago Peixoto # To be used as a custom filter
   social_media: # Links
     github: false
     facebook: false
@@ -65,7 +68,8 @@
     <p>Rebecca is fluent in: research methods, analysis, and helping us know how best to achieve our mission.</p>"
 
   long_description: false
-  custom_filter: false # To be used as a custom filter
+  custom_filter: 
+    - Rebecca Rumbul # To be used as a custom filter
   social_media: # Links
     github: false
     facebook: false
@@ -82,7 +86,8 @@
     <p>He co-edits The Journal of Public Policy @JPublicPolicy</p>"
 
   long_description: false
-  custom_filter: false # To be used as a custom filter
+  custom_filter: 
+    - Peter John # To be used as a custom filter
   social_media: # Links
     github: false
     facebook: false
@@ -98,7 +103,8 @@
     <p>François is a graduate from the University of Cape Town in English Literature. He has been awarded an MPhil in Publishing Studies from the University of Stirling and an MEd in Higher Education Studies from the University of the Western Cape. He is currently registered for a PhD inScience Communication at the University of Stellenbosch, South Africa.</p>"
 
   long_description: false
-  custom_filter: false # To be used as a custom filter
+  custom_filter: 
+    - François van Schalkwyk # To be used as a custom filter
   social_media: # Links
     github: false
     facebook: false
@@ -114,7 +120,8 @@
     <p>In addition to her BA (Hons) in English, Media and Cultural Studies, she holds an LLM in Law and Social Justice from Birkbeck College, University of London, where her dissertation, ‘The Meitheal and Modernity: A Retrospective Look to the Future’ was awarded Best Dissertation Mark in the Postgraduate School of Law. Sophie enjoys the kind of loud crashing music that gives her dad a headache, but also enjoys quieter pursuits like reading.</p>"
 
   long_description: false
-  custom_filter: false # To be used as a custom filter
+  custom_filter: 
+    - Sophie Reynolds # To be used as a custom filter
   social_media: # Links
     github: false
     facebook: false
@@ -130,7 +137,8 @@
     <p>Zeynep holds a PhD on biologically plausible pattern localisation and parameter estimation on visual data from Imperial College London (2009). Her research addressed issues of digital data representation and transformation estimations through a brain circuitry model. She was also Assistant Coordinator of Imperial’s Cognitive Systems Network, a cross-disciplinary project bringing together researchers into both biological and machine cognition. During her PhD studies she was also Visiting Scholar at the Tokyo Institute of Technology, Japan, exploring research into machine learning and signal processing methods. She also holds an MSc in Information Engineering from City University London and a BSc in Mathematics from the University of Ankara, Turkey. In 2014-15 academic year, Zeynep also took a visiting researcher position at the Computer Laboratory, University of Cambridge.</p>"
 
   long_description: false
-  custom_filter: false # To be used as a custom filter
+  custom_filter: 
+    - Zeynep Engin # To be used as a custom filter
   social_media: # Links
     github: false
     facebook: false
