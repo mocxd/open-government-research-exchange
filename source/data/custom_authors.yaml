@@ -13,6 +13,7 @@
     facebook: false
     twitter: https://twitter.com/bethnoveck
     medium: https://medium.com/@bethnoveck
+    linkedin: https://www.linkedin.com/in/beth-noveck-a469a840
     url: http://www.thegovlab.org/beth-noveck.html
 
 - title: Stefaan Verhulst
@@ -30,6 +31,7 @@
     facebook: false
     twitter: https://twitter.com/sverhulst
     medium: false
+    linkedin: https://www.linkedin.com/in/stefaan-verhulst-85a334
     url: http://www.thegovlab.org/stefaan-verhulst.html
 
 - title: Andrew Young
@@ -46,6 +48,7 @@
     facebook: false
     twitter: https://twitter.com/_andrewyoung
     medium: false
+    linkedin: https://www.linkedin.com/in/andrew-young-4a42a859
     url: http://www.thegovlab.org/team.html#andrew-young
 
 - title: Tiago Peixoto
@@ -60,6 +63,7 @@
     facebook: false
     twitter: https://twitter.com/participatory
     medium: false
+    linkedin: https://www.linkedin.com/in/tcpeixoto
     url: https://www.democracyspot.net/
 
 - title: Rebecca Rumbul
@@ -75,6 +79,7 @@
     facebook: false
     twitter: https://twitter.com/RebeccaRumbul
     medium: false
+    linkedin: https://www.linkedin.com/in/rebecca-rumbul-96a5441a
     url: https://www.mysociety.org/about/team/rebecca-rumbul/
 
 - title: Peter John
@@ -82,7 +87,7 @@
   image: peter-john.jpg
   short_description: >
     Peter John is a Professor of Political Science and Public Policy at University College London. He is known for his books on public policy, such as Analysing Public Policy (2nd edition 2012) and Making Policy Work (2011). His book with Keith Dowding, Exits, Voices and Social Investment: Citizens’ Reaction to Public Services was published with Cambridge University Press in 2012 and with Anthony Bertelli (NYU), Public Policy Investment by Oxford University Press in 2013), a study of how governments approach risk when selecting policies.
-  long_description: "He is currently using experiments to study civic participation in public policy, with the aim of finding out what governments and other public agencies can do to encourage citizens to carry out acts of collective benefit. This work came together in a book with Bloomsbury Academic, Nudge, Nudge, Think, Think: Using Experiments to Change Civic Behaviour which was published in 2011. He is currently working on a project that uses randomised controlled trails to test how the provision of social information can influence volunteering. His paper can be found at http://ssrn.com/author=1313371. He co-edits The Journal of Public Policy @JPublicPolicy."
+  long_description: "He is currently using experiments to study civic participation in public policy, with the aim of finding out what governments and other public agencies can do to encourage citizens to carry out acts of collective benefit. This work came together in a book with Bloomsbury Academic, Nudge, Nudge, Think, Think: Using Experiments to Change Civic Behaviour which was published in 2011. He is currently working on a project that uses randomised controlled trails to test how the provision of social information can influence volunteering. He co-edits The Journal of Public Policy @JPublicPolicy."
   custom_filter:
     - Peter John # To be used as a custom filter
   social_media: # Links
@@ -90,6 +95,7 @@
     facebook: false
     twitter: https://twitter.com/peterjohn10
     medium: false
+    linkedin: https://www.linkedin.com/in/peter-john-38934a11
     url: http://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1313371
 
 - title: François van Schalkwyk
@@ -105,6 +111,7 @@
     facebook: false
     twitter: https://twitter.com/Francois_fvs2
     medium: false
+    linkedin: https://www.linkedin.com/in/francoisvanschalkwyk
     url: http://sun.academia.edu/FrancoisvanSchalkwyk
 
 - title: Sophie Reynolds
@@ -121,6 +128,7 @@
     facebook: false
     twitter: https://twitter.com/SophsASophist
     medium: false
+    linkedin: https://www.linkedin.com/in/sophiereynolds
     url: http://www.nesta.org.uk/users/sophie-reynolds
 
 - title: Zeynep Engin
@@ -136,4 +144,5 @@
     facebook: false
     twitter: https://twitter.com/zeynepengin
     medium: false
+    linkedin: https://www.linkedin.com/in/zeynep-engin-203b463
     url: http://www.csap.cam.ac.uk/network/zeynep-engin/
