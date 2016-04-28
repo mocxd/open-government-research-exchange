@@ -125,31 +125,31 @@
 
 <div class="b-page-section b-main-categories">
 
-    <div class="row expanded">
-      <div class="medium-3 show-for-medium column m-all">
+    <div class="row expanded" data-equalizer>
+      <div class="medium-3 show-for-medium column m-all" data-equalizer-watch>
         <a class="e-category-item" href="b1c94ca2fbc3e78fc30069c8d0f01680-all.html">All</a>
       </div>
-      <div class="medium-3 column m-behavioral-research">
+      <div class="medium-3 column m-behavioral-research" data-equalizer-watch>
         <a class="e-category-item" href="8dc91f92aba4f74bc315de931d34dad0-behavioral-research.html">Behavioral Research</a>
       </div>
-      <div class="medium-3 column m-civic-technology">
+      <div class="medium-3 column m-civic-technology" data-equalizer-watch>
         <a class="e-category-item" href="9cbba292b288c61301dd8b90133f154e-civic-technology.html">Civic Technology</a>
       </div>
-      <div class="medium-3 column m-citizen-engagement">
+      <div class="medium-3 column m-citizen-engagement" data-equalizer-watch>
         <a class="e-category-item" href="51ff934cc13e027a5718f06418ad2626-citizen-engagement.html">Citizen Engagement</a>
       </div>
     </div>
-    <div class="row expanded">
-      <div class="medium-3 column m-data-analysis">
+    <div class="row expanded" data-equalizer>
+      <div class="medium-3 column m-data-analysis" data-equalizer-watch>
         <a class="e-category-item" href="323d6a1348df47d3174f578e1eff00eb-data-analysis.html">Data Analysis</a>
       </div>
-      <div class="medium-3 column m-expert-networking">
+      <div class="medium-3 column m-expert-networking" data-equalizer-watch>
         <a class="e-category-item" href="69ef6c90056666a97d39365918bbea9a-expert-networking.html">Expert Networking</a>
       </div>
-      <div class="medium-3 column m-open-data">
+      <div class="medium-3 column m-open-data" data-equalizer-watch>
         <a class="e-category-item" href="10b4ea82dbdae1631ff5543a6979331c-open-data.html">Open Data</a>
       </div>
-      <div class="medium-3 column m-labs-and-experimentation">
+      <div class="medium-3 column m-labs-and-experimentation" data-equalizer-watch>
         <a class="e-category-item" href="92ed4c4a4e3dbe0bd2fbe85055d0f7cc-labs-and-experimentation.html">Labs and Experimentation</a>
       </div>
 
@@ -211,6 +211,8 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/plugins/foundation.equalizer.js"></script>
 <script src="./js/underscore.js"></script>
 <script src="./js/lunr.js"></script>
 <script src="./js/lib/scripts.js"></script>
@@ -220,6 +222,12 @@
 
 
 
+
+<script>
+$(function() {
+$(document).foundation();
+});
+</script>
 
 </body>
 </html>
