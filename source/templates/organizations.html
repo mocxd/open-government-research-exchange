@@ -68,10 +68,11 @@
                 {%- set org_link = custom_org.id ~ '-' ~ ( custom_org.title | slug ) ~ '.html' -%}
               {% endif %}
             {% endfor %}
-
+            {% if org.title %}
             <div class="column large-4 e-list-item">
             <a href="{{org_link }}">{{org.value}}</a>
             </div>
+            {%endif%}
 
       {%endfor%}
     </div>
