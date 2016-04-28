@@ -62,7 +62,7 @@
       {% for org in  organization %}
         {% if org.title %}
         <div class="column large-4 e-list-item">
-          <a href="{{org.id }}-{{org.title | slug }}.html">{{org.value}}</a>
+          <a href="{{ org.id }}-{{org.title | slug }}.html">{{org.value}}</a>
         </div>
         {% endif %}
       {% endfor %}
