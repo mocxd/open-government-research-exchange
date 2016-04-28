@@ -21,6 +21,15 @@
             {% if social_media.github %}
               <a href="{{ social_media.github }}" class="b-social-media-icon m-github" target="_blank"><img src="./img/github-logo.svg" alt=""></a>
             {% endif %}
+            {% if social_media.facebook %}
+              <a href="{{ social_media.facebook }}" class="b-social-media-icon m-facebook" id="facebook-logo" target="_blank"><img src="./img/facebook-logo.png" alt="{{title}} Facebook"></a>
+            {% endif %}
+            {% if social_media.medium %}
+              <a href="{{ social_media.medium }}" class="b-social-media-icon m-medium" id="medium-logo" target="_blank"><img src="./img/medium-m-color-688.png" alt="{{title}} Medium"></a>
+            {% endif %}
+            {% if social_media.url %}
+              <a href="{{ social_media.url }}" class="b-social-media-icon m-url" id="medium-url" target="_blank"><img src="./img/browser-window-logo.png" alt="{{title}} url"></a>
+            {% endif %}
           </div>
         </div>
       </div>
