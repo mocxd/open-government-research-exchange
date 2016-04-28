@@ -47,7 +47,7 @@
         <div class="column large-3 e-org-logo m-ogp">
           <img class="" src="./img/organizations/open-government-partnership-logo.jpg" alt="">
         </div>
-
+        
     </div>
   </div> #}
 
@@ -60,9 +60,9 @@
   <div class="b-page-section b-all-categories-list">
     <div class="row expanded">
       {% for org in  organization %}
-        {% if org.title %}
+        {% if not org.value | titleExists(organizations) %}
         <div class="column large-4 e-list-item">
-          <a href="{{ org.id }}-{{org.title | slug }}.html">{{org.value}}</a>
+          <a href="{{org.id }}-{{org.title | slug }}.html">{{org.value}}
         </div>
         {% endif %}
       {% endfor %}
