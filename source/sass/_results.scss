@@ -33,6 +33,7 @@
 
     &:hover {
       transition: all .4s ease;
+      background-color: rgba($black, .05);
 
       &:after {
         border-top: 12px solid $main-color;
