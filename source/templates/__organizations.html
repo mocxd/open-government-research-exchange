@@ -54,13 +54,13 @@
     {% for d in $global.papers %}
 
       {% if custom_filter and d.organization | slug | containsAny(custom_filter) %}
-        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
+        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories, $global.custom_authors)}}
 
       {% else %}
 
     {% for org in d.organization %}
       {% if org | slug == title | slug %}
-        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
+        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories, $global.custom_authors)}}
       {% endif %}
       {% endfor %}
 
