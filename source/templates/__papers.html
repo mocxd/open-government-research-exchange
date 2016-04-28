@@ -16,8 +16,23 @@
         <h1 class="e-paper-title">{{ title }}</h1>
         <h3 class="e-paper-authors">
           {% for author in authors %}
-          <a class="e-author-link" href="{{ author | returnID($global.authors) }}-{{ author | slug }}.html">{{author}}{% if not loop.last %},{% endif %}</a>
+
+            {%- set author_link = (author | returnID($global.authors)) ~ '-' ~ ( author | slug ) ~ '.html' -%}
+
+            {% for custom_author in $global.custom_authors %}
+
+              {% if custom_author.custom_filter | contains(author) %}
+                {%- set author_link = custom_author.id ~ '-' ~ ( custom_author.title | slug ) ~ '.html' -%}
+              {% endif %}
+
+            {% endfor %}
+
+            <a class="e-author-link" href="{{ author_link }}">{{author}}</a>
+
           {% endfor %}
+{#           <a class="e-author-link" href="{{ author | returnID($global.authors) }}-{{ author | slug }}.html">{{author}}{% if not loop.last %},{% endif %}</a>
+          {% endif %}
+          {% endfor %} #}
         </h3>
         <h4 class="e-paper-date">{{ paper_date }}</h4>
       </div>
