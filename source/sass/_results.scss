@@ -8,13 +8,13 @@
   position: relative;
   vertical-align: top;
   background-color: $white;
-  padding: 30px 30px 90px; 
+  padding: 30px 30px 90px;
   width: 100%;
   display: block;
   text-decoration: none;
 
   @include breakpoint($medium) {
-    width: 50%;    
+    width: 50%;
     margin: 0 -2px;
     // &:nth-of-type(2n + 1) a { background-color: rgba($black, .1); }
 
@@ -47,10 +47,10 @@
       // &:nth-of-type(3n + 1):hover { transform: scale(1.1) translate(4.5%); }
       // &:nth-of-type(3n + 2):hover { transform: scale(1.1); }
       // &:nth-of-type(3n):hover { transform: scale(1.1) translate(-4.5%); }
-    }  
+    }
   }
 
-  
+
   // Sets the trisngle on the top left corner
   &:after {
     content: "";
@@ -68,6 +68,7 @@
   .e-result-name {
     font-size: 1rem;
     text-transform: none;
+    min-height: 4.5rem;
   }
 
   .e-result-taxonomy {
@@ -75,6 +76,7 @@
       font-size: .8rem;
       margin: 10px 0 0;
     }
+    min-height: 3rem;
   }
 
   .e-tag {
@@ -88,14 +90,15 @@
 
     &:empty { display: none; }
 
-    &:hover { 
-      opacity: 1; 
+    &:hover {
+      opacity: 1;
       text-decoration: none;
     }
   }
 
   .e-result-authors {
     font-size: .9rem;
+    min-height: 3rem;
   }
 
   .e-result-extras {
@@ -114,7 +117,7 @@
 
     i {
       opacity: .2;
-      font-size: 1.7rem; 
+      font-size: 1.7rem;
       line-height: 1;
       vertical-align: bottom;
       margin: 0 5px -2px;
@@ -124,7 +127,7 @@
 
 // Sets the banner for the restricted access items
 .b-result-item {
-    
+
     .e-result-extras {
       &.m-the-govlab {
         background-color: $purple;
@@ -138,24 +141,24 @@
 
       &.m-world-bank-digital-engagement-evaluation-team {
         background-color: $blue;
-        i {color: $white;} 
-        .e-organization-logo { 
+        i {color: $white;}
+        .e-organization-logo {
           float: left;
           max-height: 34px;
-          
+
         }
       }
 
-    .m-closed-access { 
-      color: $red; 
+    .m-closed-access {
+      color: $red;
       opacity: 1;
     }
 
-    .e-organization-logo { 
+    .e-organization-logo {
       float: left;
       max-height: 26px;
     }
-  
+
   }
 
   &.m-type-research-report {

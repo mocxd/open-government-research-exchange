@@ -6,7 +6,7 @@
       <div class="e-result-image" style="background-image: url('{{paper.cover_image}}')"></div>
       {% endif %} #}
 
-      <h3 class="e-result-name"><a href="{{paper.id}}-{{paper.title | slug}}.html" title="{{paper.title}}">{{paper.title}}</a></h3>
+      <h3 class="e-result-name"><a href="{{paper.id}}-{{paper.title | slug}}.html" title="{{paper.title}}">{{paper.title | truncate(150) }}</a></h3>
       </a>
 
       {% if paper.authors %}
