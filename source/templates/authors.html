@@ -48,25 +48,30 @@
       {% set 'author_list' = authors | createPeopleObjects() %}
 
     {% for letter in alphabet %}
+    <div class="alpha_anchor">
         <a name="{{letter}}"></a>
-        {% for a in author_list | sort(attribute="last_name") %}
 
-        {%- set author_link = (a.full_name | returnID(authors)) ~ '-' ~ ( a.full_name | slug ) ~ '.html' -%}
+          {% for a in author_list | sort(attribute="last_name") %}
+            {% if a.letter_idx == letter %}
 
-        {% for custom_author in custom_authors %}
+          {%- set author_link = (a.full_name | returnID(authors)) ~ '-' ~ ( a.full_name | slug ) ~ '.html' -%}
 
-            {% if custom_author.custom_filter | contains(a.full_name) %}
-              {%- set author_link = custom_author.id ~ '-' ~ ( custom_author.title | slug ) ~ '.html' -%}
+            {% for custom_author in custom_authors %}
+
+                {% if custom_author.custom_filter | contains(a.full_name) %}
+                  {%- set author_link = custom_author.id ~ '-' ~ ( custom_author.title | slug ) ~ '.html' -%}
+                {% endif %}
+
+            {% endfor %}
+
+            <div class="column large-4 e-list-item">
+              <a href="{{ author_link }}">{{a.full_name }}</a>
+            </div>
             {% endif %}
+            
+          {% endfor %}
 
-        {% endfor %}
-
-        {% if a.letter_idx == letter %}
-        <div class="column large-4 e-list-item">
-          <a href="{{ author_link }}">{{a.full_name }}</a>
         </div>
-        {% endif %}
-        {% endfor %}
       {% endfor %}
     </div>
   </div>
