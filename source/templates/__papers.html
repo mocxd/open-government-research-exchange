@@ -16,7 +16,6 @@
         <h1 class="e-paper-title">{{ title }}</h1>
         <h3 class="e-paper-authors">
           {% for author in authors %}
-
             {%- set author_link = (author | returnID($global.authors)) ~ '-' ~ ( author | slug ) ~ '.html' -%}
 
             {% for custom_author in $global.custom_authors %}
