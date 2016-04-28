@@ -8,9 +8,9 @@
       <div class="row">
         <div class="large-6 column e-image-column">
           <img class="e-org-logo" src="img/organizations/{{ image_white }}" alt="{{title}}" title="{{title}}">
-          {% if long_description %}
+{#           {% if long_description %}
           <span class="b-button" onclick="$('.b-extra-info-panel').toggleClass('visible');">More Information</span>
-          {% endif %}
+          {% endif %} #}
         </div>
         <div class="large-6 column">
           <p class="e-description">{{ short_description | safe }}</p>
@@ -52,13 +52,13 @@
     {% for d in $global.papers %}
 
       {% if custom_filter and d.organization | slug | containsAny(custom_filter) %}
-        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
+        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories, $global.custom_authors)}}
 
       {% else %}
 
     {% for org in d.organization %}
       {% if org | slug == title | slug %}
-        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
+        {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories, $global.custom_authors)}}
       {% endif %}
       {% endfor %}
 

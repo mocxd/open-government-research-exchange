@@ -1,4 +1,4 @@
-{% macro createResult(paper,authors,taxonomy_category,taxonomy_methodology, taxonomy_objective, type, region, sector,tools,main_categories) %}
+{% macro createResult(paper,authors,taxonomy_category,taxonomy_methodology, taxonomy_objective, type, region, sector,tools,main_categories, featured_authors) %}
 
 
 <div class="b-result-item m-access-{{paper.access | slug}} f-{{paper.organization | slug}} {% for obj in paper.taxonomy.objective %} {%if obj%} f-{{obj | slug}} {% endif %} {% endfor %}f-{{paper.access | slug}}  {% for methodology in paper.taxonomy.methodology %} {% if methodology %} f-{{methodology | slug}} {% endif %} {% endfor %} {% for s in paper.sector %} {% if s %} f-{{ s | slug}} {% endif %} {% endfor %} {% for r in paper.region %} {% if r %} f-{{ r | slug}} {% endif %} {% endfor %} {% for t in paper.tools %} {% if t %} f-{{ t | slug}} {% endif %} {% endfor %} f-{{paper.type | slug}} f-search-{{paper.id}}{% for c in paper.taxonomy.category %} m-{{ c | slug}}{% endfor %} ">
@@ -6,16 +6,32 @@
       <div class="e-result-image" style="background-image: url('{{paper.cover_image}}')"></div>
       {% endif %} #}
 
-      <h3 class="e-result-name"><a href="{{paper.id}}-{{paper.title | slug}}.html" title="{{paper.title}}">{{paper.title}}</a></h3>
+      <h3 class="e-result-name"><a href="{{paper.id}}-{{paper.title | slug}}.html" title="{{paper.title}}">{{paper.title | truncate(150) }}</a></h3>
       </a>
 
       {% if paper.authors %}
       <p class="e-result-authors">
         {% for author in paper.authors %}
-          <a class="e-author-link" href="{{ author | returnID(authors) }}-{{ author | slug }}.html">{{author}}{% if not loop.last %},{% endif %}</a>
+
+          {%- set author_link = (author | returnID(authors)) ~ '-' ~ ( author | slug ) ~ '.html' -%}
+
+            {% for custom_author in featured_authors %}
+
+              {% if custom_author.custom_filter | contains(author) %}
+                {%- set author_link = custom_author.id ~ '-' ~ ( custom_author.title | slug ) ~ '.html' -%}
+              {% endif %}
+
+            {% endfor %}
+
+
+          <a class="e-author-link" href="{{ author_link }}">{{author}}{% if not loop.last %},{% endif %}</a>
+
+
         {% endfor %}
       </p>
       {% endif %}
+
+
 
 
       <!-- These IF statements are not really working.  -->
