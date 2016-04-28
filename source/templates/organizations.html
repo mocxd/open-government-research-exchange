@@ -59,13 +59,21 @@
 
   <div class="b-page-section b-all-categories-list">
     <div class="row expanded">
-      {% for org in  organization %}
-        {% if org.title %}
-        <div class="column large-4 e-list-item">
-         <a href="{{org.id }}-{{org.title | slug }}.html">{{org.value}}</a>
-        </div>
-        {% endif %}
-      {% endfor %}
+      {% for org in organization %}
+
+        {%- set org_link = org.id ~ '-' ~ (org.title | slug) ~ '.html' -%}
+
+            {% for custom_org in organizations %}
+              {% if custom_org.custom_filter | contains(org.title) %}
+                {%- set org_link = custom_org.id ~ '-' ~ ( custom_org.title | slug ) ~ '.html' -%}
+              {% endif %}
+            {% endfor %}
+
+            <div class="column large-4 e-list-item">
+            <a href="{{org_link }}">{{org.value}}</a>
+            </div>
+
+      {%endfor%}
     </div>
   </div>
 

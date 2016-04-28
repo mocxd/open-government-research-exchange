@@ -49,13 +49,24 @@
 
     {% for letter in alphabet %}
         <a name="{{letter}}"></a>
-          {% for a in author_list | sort(attribute="last_name") %}
-          {% if a.letter_idx == letter and not a.full_name | titleExists(custom_authors) %}
-          <div class="column large-4 e-list-item">
-            <a href="{{a.id }}-{{a.full_name | slug }}.html">{{a.full_name }}</a>
-          </div>
-          {% endif %}
-          {% endfor %}
+        {% for a in author_list | sort(attribute="last_name") %}
+
+        {%- set author_link = (a.full_name | returnID(authors)) ~ '-' ~ ( a.full_name | slug ) ~ '.html' -%}
+
+        {% for custom_author in custom_authors %}
+
+            {% if custom_author.custom_filter | contains(a.full_name) %}
+              {%- set author_link = custom_author.id ~ '-' ~ ( custom_author.title | slug ) ~ '.html' -%}
+            {% endif %}
+
+        {% endfor %}
+
+        {% if a.letter_idx == letter %}
+        <div class="column large-4 e-list-item">
+          <a href="{{ author_link }}">{{a.full_name }}</a>
+        </div>
+        {% endif %}
+        {% endfor %}
       {% endfor %}
     </div>
   </div>
