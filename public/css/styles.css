@@ -4581,6 +4581,7 @@ Styleguide 1.2
   right: 0;
   z-index: 10;
   display: none;
+  background-color: red;
   opacity: .1; }
   #overlay.m-active {
     display: block; }
@@ -7566,7 +7567,7 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
   background-color: rgba(51, 51, 51, 0.2);
   transition: max-height 0.5s ease, padding 0.5s ease; }
   .b-extra-info-panel.visible {
-    max-height: 350px;
+    max-height: 3500px;
     padding: 50px 0; }
   .b-extra-info-panel h2 {
     text-align: left;
