@@ -7737,3 +7737,24 @@ option {
 .b-main-menu .m-disabled {
   opacity: .5;
   pointer-events: none; }
+
+.b-fixed-button {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  border-radius: 100%;
+  position: fixed;
+  visibility: hidden;
+  text-align: center;
+  padding-top: 12px;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  transition: background-color .1s linear; }
+  .b-fixed-button.m-show {
+    visibility: visible; }
+  .b-fixed-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    transition: background-color .1s linear; }
