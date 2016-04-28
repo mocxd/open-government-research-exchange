@@ -7758,3 +7758,6 @@ option {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     transition: background-color .1s linear; }
+
+#facebook-logo {
+  width: 41px; }
