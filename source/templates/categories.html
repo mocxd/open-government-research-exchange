@@ -13,9 +13,9 @@
   </div>
 
   <div class="b-page-section b-main-categories">
-    <div class="row expanded">
+    <div class="row expanded" data-equalizer>
       {% for cat in categories %}
-        <div class="medium-3 show-for-medium column e-list-item m-{{cat.title | slug}}">
+        <div class="medium-3 show-for-medium column e-list-item m-{{cat.title | slug}}" data-equalizer-watch>
           <a class="e-category-item" href="{{cat.id }}-{{cat.title | slug }}.html">{{cat.title}}</a>
         </div>
       {% endfor %}
@@ -40,7 +40,7 @@
               <a href="{{cat.id }}-{{cat.title | slug }}.html">
             {%endif%}
           {% endfor %}
-              {{cat.value}} 
+              {{cat.value}}
               </a>
           </div>
           {% endif %}
