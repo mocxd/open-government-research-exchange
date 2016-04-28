@@ -53,7 +53,7 @@
 
     {% for d in $global.papers %}
 
-      {% if custom_filter and d.organization | slug == custom_filter %}
+      {% if custom_filter and d.organization | slug | containsAny(custom_filter) %}
         {{resultItem.createResult(d,$global.authors,$global.taxonomy_category, $global.taxonomy_methodology,$global.taxonomy_objective, $global.type,$global.region, $global.sector,$global.tools,$global.categories)}}
 
       {% else %}

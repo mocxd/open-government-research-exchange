@@ -29,14 +29,14 @@
 {# List of Authors - All Authors #}
   <div class="b-divider">
     <h1>All Authors</h1>
+      <a name="authorlist"></a>
   </div>
 
   <div class="b-page-section b-all-categories-list">
     <div class="row expanded">
 
       <span class="b-fixed-button-trigger"></span>
-      <a name="author-list"></a>
-      <a class="b-fixed-button" href="#author-list"><i class="material-icons">arrow_upward</i></a>
+      <a class="b-fixed-button" href="#authorlist"><i class="material-icons">arrow_upward</i></a>
 
       <div class="large-12 columns e-index">
       {% set 'alphabet' = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split("") %}
@@ -48,14 +48,30 @@
       {% set 'author_list' = authors | createPeopleObjects() %}
 
     {% for letter in alphabet %}
+    <div class="alpha_anchor">
         <a name="{{letter}}"></a>
+
           {% for a in author_list | sort(attribute="last_name") %}
-          {% if a.letter_idx == letter and not a.full_name | titleExists(custom_authors) %}
-          <div class="column large-4 e-list-item">
-            <a href="{{a.id }}-{{a.full_name | slug }}.html">{{a.full_name }}</a>
-          </div>
-          {% endif %}
+            {% if a.letter_idx == letter %}
+
+          {%- set author_link = (a.full_name | returnID(authors)) ~ '-' ~ ( a.full_name | slug ) ~ '.html' -%}
+
+            {% for custom_author in custom_authors %}
+
+                {% if custom_author.custom_filter | contains(a.full_name) %}
+                  {%- set author_link = custom_author.id ~ '-' ~ ( custom_author.title | slug ) ~ '.html' -%}
+                {% endif %}
+
+            {% endfor %}
+
+            <div class="column large-4 e-list-item">
+              <a href="{{ author_link }}">{{a.full_name }}</a>
+            </div>
+            {% endif %}
+            
           {% endfor %}
+
+        </div>
       {% endfor %}
     </div>
   </div>
