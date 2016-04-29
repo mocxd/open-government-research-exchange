@@ -19,7 +19,8 @@
   .m-all {
     background-color: $all;
   }
-  .m-behavioral-research {
+  .m-behavioral-research,
+  .m-behavioral-science-and-nudges {
     background-color: $behavioral-research;
   }
   .m-citizen-engagement {
@@ -43,6 +44,52 @@
 
   
 }
+
+
+// Colors for the main categories
+.e-tag {  
+  .m-all {
+    background-color: rgba($all, .2);
+    color: $all;
+  }
+  .m-behavioral-science-and-nudges {
+    background-color: rgba($behavioral-research, .2);
+    color: $behavioral-research;
+  }
+  .m-citizen-engagement {
+    background-color: rgba($citizen-engagement, .2);
+    color: $citizen-engagement;
+  }
+  .m-civic-technology {
+    background-color: rgba($civic-technology, .2);
+    color: $civic-technology;
+  }
+  .m-data-analysis {
+    background-color: rgba($data-analysis, .2);
+    color: $data-analysis;
+  }
+  .m-expert-networking {
+    background-color: rgba($expert-networking, .2);
+    color: $expert-networking;
+  }
+  .m-open-data {
+    background-color: rgba($open-data, .2);
+    color: $open-data;
+  }
+  .m-labs-and-experimentation {
+    background-color: rgba($labs-and-experimentation, .2);
+    color: $labs-and-experimentation;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 
