@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "test": "gulp build && node test.js"
   },
   "author": "",
   "license": "None",
@@ -31,6 +32,7 @@
     "lunr": "^0.7.0",
     "md5": "^2.1.0",
     "minimist": "^1.2.0",
+    "simplecrawler": "^0.6.2",
     "vinyl": "^1.1.1"
   }
 }
