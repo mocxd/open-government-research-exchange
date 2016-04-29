@@ -3,16 +3,16 @@
 {% block main %}
 <!-- main content starts here -->
 <div class="b-paper-page m-{{organization}}">
-  <div class="b-top-section">
+  <div class="b-top-section {%for cat in taxonomy.category%} m-{{cat | slug }} {%endfor%}">
     <div class="row">
       <div class="large-10 column small-centered">
-        {% if organization == "the-govlab" %}
+        <!-- {% if organization == "the-govlab" %}
           <img class="e-organization-logo" src="img/organizations/govlab-logo-white.png" alt="">
         {% elif organization == "mysociety" %}
           <img class="e-organization-logo" src="img/organizations/mysociety-logo.svg" alt="">
         {% elif organization == "world-bank-digital-engagement-evaluation-team" %}
           <img class="e-organization-logo" src="img/organizations/deet-logo-white.png" alt="">
-        {% endif %}
+        {% endif %} -->
         <h1 class="e-paper-title">{{ title }}</h1>
         <h3 class="e-paper-authors">
           {% for author in authors %}

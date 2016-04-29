@@ -44,7 +44,7 @@
               {%- if cat == main_cat.custom_filter -%}
                 <a href="{{main_cat.id }}-{{main_cat.title | slug }}.html" class="e-tag m-{{cat}}">
               {%- elif not cat == main_cat.custom_filter -%}
-                <a href="{{ cat | returnID(taxonomy_category) }}-{{ cat | slug }}.html" class="e-tag m-{{cat}}">
+                <a href="{{ cat | returnID(taxonomy_category) }}-{{ cat | slug }}.html" class="e-tag m-{{cat | slug }}">
               {%- endif -%}
             {%- endfor -%}
               {{cat}}</a>
