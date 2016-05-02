@@ -7245,7 +7245,8 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
       text-decoration: none; }
   .b-main-categories .m-all {
     background-color: #3b4f65; }
-  .b-main-categories .m-behavioral-research {
+  .b-main-categories .m-behavioral-research,
+  .b-main-categories .m-behavioral-science-and-nudges {
     background-color: #de606c; }
   .b-main-categories .m-citizen-engagement {
     background-color: #5fa9d4; }
@@ -7259,6 +7260,38 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     background-color: #00ad98; }
   .b-main-categories .m-labs-and-experimentation {
     background-color: #dbc048; }
+
+.e-tag .m-all {
+  background-color: rgba(59, 79, 101, 0.2);
+  color: #3b4f65; }
+
+.e-tag .m-behavioral-science-and-nudges {
+  background-color: rgba(222, 96, 108, 0.2);
+  color: #de606c; }
+
+.e-tag .m-citizen-engagement {
+  background-color: rgba(95, 169, 212, 0.2);
+  color: #5fa9d4; }
+
+.e-tag .m-civic-technology {
+  background-color: rgba(166, 127, 185, 0.2);
+  color: #a67fb9; }
+
+.e-tag .m-data-analysis {
+  background-color: rgba(243, 180, 75, 0.2);
+  color: #f3b44b; }
+
+.e-tag .m-expert-networking {
+  background-color: rgba(110, 123, 151, 0.2);
+  color: #6e7b97; }
+
+.e-tag .m-open-data {
+  background-color: rgba(0, 173, 152, 0.2);
+  color: #00ad98; }
+
+.e-tag .m-labs-and-experimentation {
+  background-color: rgba(219, 192, 72, 0.2);
+  color: #dbc048; }
 
 .b-organizations .e-organization-logo {
   padding: 60px 20px;
