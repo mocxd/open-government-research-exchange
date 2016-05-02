@@ -1,3 +1,6 @@
+{% extends '_base.html' %}
+{% block main %}
+
 <form action="https://docs.google.com/forms/d/1fszCIYbk831NQ0YOtoM1x30jiGHrsr8DsFAYTgQWUrU/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0;">
 <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
@@ -46,3 +49,5 @@
 <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action ">
 <div class="ss-password-warning ss-secondary-text">Never submit passwords through Google Forms.</div></td>
 </tr></tbody></table></div></ol></form>
+
+{% endblock %}
