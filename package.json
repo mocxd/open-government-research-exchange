@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "test": "gulp build && node test.js"
   },
   "author": "",
   "license": "None",
@@ -12,6 +13,7 @@
     "browser-sync": "^2.11.1",
     "colors": "^1.1.2",
     "event-stream": "^3.3.2",
+    "express": "^4.13.4",
     "fs": "^0.0.2",
     "govlab-styleguide": "^1.0.9",
     "gulp": "^3.9.1",
@@ -31,6 +33,7 @@
     "lunr": "^0.7.0",
     "md5": "^2.1.0",
     "minimist": "^1.2.0",
+    "simplecrawler": "^0.6.2",
     "vinyl": "^1.1.1"
   }
 }
