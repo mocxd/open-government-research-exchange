@@ -4,6 +4,13 @@
 {% import '_macros.html' as $macros %}
 
 {% block main %}
+
+<style>
+#lunr-filter.m-loading {
+  background-color: red;
+}
+</style>
+
 <div class="b-categories-page">
   <div class="b-filter-ui js-and">
     <div class="b-top-section m-{{title | slug}}">

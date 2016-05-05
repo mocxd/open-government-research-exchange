@@ -242,6 +242,7 @@ $(function() {
        }
 
        $( '.b-lunr-results' ).html(resultsHTML);
+       $(this).removeClass('m-loading');
    };
 
    var filter = function (e) {
@@ -273,14 +274,20 @@ $(function() {
         }
 
         $( document ).trigger( 'filter:update' );
-
+        $(this).removeClass('m-loading');
     }
 
     var debouncedSearch = _.debounce(search, 300, false);
     var debouncedFilter = _.debounce(filter, 500, false);
 
+    $('#lunr-search').keyup(function () {
+        $(this).addClass('m-loading');
+    });
     $('#lunr-search').keyup(debouncedSearch);
     $('#lunr-search').on('search:execute', debouncedSearch);
+    $('#lunr-filter').keyup(function () {
+        $(this).addClass('m-loading');
+    });
     $('#lunr-filter').keyup(debouncedFilter);
 
     // prevent enter key from submitting form
