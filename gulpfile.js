@@ -703,7 +703,6 @@ gulp.task('lunr', ['json'], function() {
     this.field('tags');
   });
 
-  // lunr.Pipeline.registerFunction(deepTokenize, 'deepTokenize');
   lunr.tokenizer.registerFunction(deepTokenize, 'deepTokenize');
 
   index.tokenizer(
@@ -751,6 +750,11 @@ gulp.task('lunr', ['json'], function() {
           this.field('region');
           this.field('tags');
         });
+
+        _idx.tokenizer(
+          deepTokenize
+          );
+
         _data.forEach(function(p) {
           _idx.add(p);
         });
