@@ -624,6 +624,36 @@ gulp.task('csv2json', function() {
   .pipe(gulp.dest('source/data'))
 });
 
+gulp.task('prunejson', function() {
+  compileData();
+
+  var pruned = { 'papers' : [] };
+  for (p in generatedData.papers) {
+    pruned.papers.push({
+      'title' : generatedData.papers[p].title,
+      'url' : generatedData.papers[p].url,
+      'tags' : generatedData.papers[p].tags
+    });
+  }
+
+  return gulpFile('all.json', JSON.stringify(pruned.papers), { src: true })
+  .pipe(gulp.dest('source/support/datasheet'))
+  ;
+
+});
+
+gulp.task('datasheets', ['prunejson'], function() {
+  if (!fs.existsSync('./public/datasheet/')){
+    fs.mkdirSync('./public/datasheet/');
+  }
+
+  csvjson.toCSV('./source/support/datasheet/all.json').save('./source/support/datasheet/all.csv');
+  csvjson.toCSV('./source/support/datasheet/all.json').save('./public/datasheet/all.csv');
+
+  return gulp.src('source/support/datasheet/all.json')
+  .pipe(gulp.dest('public/datasheet'));
+});
+
 gulp.task('json-subsets', ['json'], function () {
   compileData();
 
