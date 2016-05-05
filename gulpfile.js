@@ -22,6 +22,7 @@ es              = require('event-stream'),
 fs              = require('fs'),
 md5             = require('md5'),
 lunr            = require('lunr'),
+csvjson         = require('csvjson'),
 packagejson     = require('./package.json')
 ;
 
