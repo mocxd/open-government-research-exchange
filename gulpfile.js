@@ -185,10 +185,10 @@ function createPeopleObjects(obj) {
   var people = [];
   obj.forEach(function(val) {
     if (val){
-    var nameArr = val.value.split(" ");
-    var lastName = nameArr[nameArr.length-1];
-    var firstName = nameArr.slice(0,nameArr.indexOf(lastName)).join(" ");
-    people.push(new Person(val.id, firstName, lastName));
+      var nameArr = val.value.split(" ");
+      var lastName = nameArr[nameArr.length-1];
+      var firstName = nameArr.slice(0,nameArr.indexOf(lastName)).join(" ");
+      people.push(new Person(val.id, firstName, lastName));
     }
   });
   return people;
@@ -651,6 +651,40 @@ gulp.task('json-subsets', ['json'], function () {
   return _stream.pipe(gulp.dest('source/data'));
 });
 
+// split tokens from strings deeply for entry into lunr index
+// this is to solve a problem where strings in array fields are added to the index unsplit,
+// causing the subsequent words to be unsearchable through the normal lunr search syntax
+var deepTokenize = function (obj) {
+  if (!arguments.length || obj == null || obj == undefined) return [];
+  if (Array.isArray(obj)) {
+    var m = obj.map(function (t) { return lunr.utils.asString(t).toLowerCase(); });
+
+    var result = [];
+    for (var i in m) {
+      if (lunr.tokenizer.seperator.test(m[i])) {
+        var _split = m[i].split(lunr.tokenizer.seperator);
+        for (var s in _split) {
+          result.push(_split[s]);
+        }
+      } else {
+        result.push(m[i]);
+      }
+    }
+
+    return result;
+  }
+
+  return obj.toString().trim().toLowerCase().split(lunr.tokenizer.seperator);
+}
+
+// default tokenizer code for reference / fallback
+// var deepTokenize = function (obj) {
+//   if (!arguments.length || obj == null || obj == undefined) return []
+//   if (Array.isArray(obj)) return obj.map(function (t) { return lunr.utils.asString(t).toLowerCase() })
+
+//   return obj.toString().trim().toLowerCase().split(lunr.tokenizer.seperator)
+// }
+
 gulp.task('lunr', ['json'], function() {
   compileData();
 
@@ -668,6 +702,12 @@ gulp.task('lunr', ['json'], function() {
     this.field('region');
     this.field('tags');
   });
+
+  lunr.tokenizer.registerFunction(deepTokenize, 'deepTokenize');
+
+  index.tokenizer(
+    deepTokenize
+    );
 
   var papers = generatedData.papers;
 
@@ -710,6 +750,11 @@ gulp.task('lunr', ['json'], function() {
           this.field('region');
           this.field('tags');
         });
+
+        _idx.tokenizer(
+          deepTokenize
+          );
+
         _data.forEach(function(p) {
           _idx.add(p);
         });
