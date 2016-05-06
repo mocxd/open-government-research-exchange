@@ -7387,6 +7387,30 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     .b-result-item .e-tag:hover {
       opacity: 1;
       text-decoration: none; }
+    .b-result-item .e-tag.m-all {
+      background-color: rgba(59, 79, 101, 0.2);
+      color: #2c3b4b; }
+    .b-result-item .e-tag.m-behavioral-science-and-nudges {
+      background-color: rgba(222, 96, 108, 0.2);
+      color: #d73e4d; }
+    .b-result-item .e-tag.m-citizen-engagement {
+      background-color: rgba(95, 169, 212, 0.2);
+      color: #3f98cb; }
+    .b-result-item .e-tag.m-civic-technology {
+      background-color: rgba(166, 127, 185, 0.2);
+      color: #9465ab; }
+    .b-result-item .e-tag.m-data-analysis {
+      background-color: rgba(243, 180, 75, 0.2);
+      color: #f0a425; }
+    .b-result-item .e-tag.m-expert-networking {
+      background-color: rgba(110, 123, 151, 0.2);
+      color: #5c6780; }
+    .b-result-item .e-tag.m-open-data {
+      background-color: rgba(0, 173, 152, 0.2);
+      color: #008474; }
+    .b-result-item .e-tag.m-labs-and-experimentation {
+      background-color: rgba(219, 192, 72, 0.2);
+      color: #d1b229; }
   .b-result-item .e-result-authors {
     font-size: .9rem;
     min-height: 3rem; }
@@ -7610,6 +7634,11 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     text-align: left;
     font-weight: 600;
     font-size: 1.3rem; }
+
+.b-about-page .m-macarthur, .b-about-page .m-rciog {
+  padding: 60px 20px;
+  max-width: 360px;
+  margin: 0 auto; }
 
 option {
   color: #333; }
