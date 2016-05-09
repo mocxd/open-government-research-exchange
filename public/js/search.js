@@ -1,6 +1,28 @@
 $(function() {
     var index, papers, scopes, scopedIndices = {}, resultSnippet;
 
+    var deepTokenize = function (obj) {
+        if (!arguments.length || obj == null || obj == undefined) return [];
+        if (Array.isArray(obj)) {
+            var m = obj.map(function (t) { return lunr.utils.asString(t).toLowerCase(); });
+            var result = [];
+            for (var i in m) {
+                if (lunr.tokenizer.seperator.test(m[i])) {
+                    var _split = m[i].split(lunr.tokenizer.seperator);
+                    for (var s in _split) {
+                        result.push(_split[s]);
+                    }
+                } else {
+                    result.push(m[i]);
+                }
+            }
+            return result;
+        }
+        return obj.toString().trim().toLowerCase().split(lunr.tokenizer.seperator);
+    }
+
+    lunr.tokenizer.registerFunction(deepTokenize, 'deepTokenize');
+
     var slug = function (t) {
         return t ? t.toString().toLowerCase()
         .replace(/\s+/g, '-')
@@ -213,16 +235,17 @@ $(function() {
             $snippet.find('.m-closed-access').remove();
 
             if (mapping[m].access.toLowerCase() === 'closed') {
-             $snippet.find('.e-result-extras').append('<i class="material-icons m-closed-access" title="Closed Access">lock_outline</i>')
-         }
+               $snippet.find('.e-result-extras').append('<i class="material-icons m-closed-access" title="Closed Access">lock_outline</i>')
+           }
 
-         resultsHTML += $snippet.prop('outerHTML');
-     }
+           resultsHTML += $snippet.prop('outerHTML');
+       }
 
-     $( '.b-lunr-results' ).html(resultsHTML);
- };
+       $( '.b-lunr-results' ).html(resultsHTML);
+       $('.e-search-trigger').val('search');
+   };
 
- var filter = function (e) {
+   var filter = function (e) {
         // $( '.b-lunr-results' ).text( JSON.stringify(index.search($('#lunr-search').val())) );
 
         var results,
@@ -251,14 +274,20 @@ $(function() {
         }
 
         $( document ).trigger( 'filter:update' );
-
+        $('.e-search-trigger').val('search');
     }
 
     var debouncedSearch = _.debounce(search, 300, false);
     var debouncedFilter = _.debounce(filter, 500, false);
 
+    $('#lunr-search').keyup(function () {
+        $('.e-search-trigger').val('more_horiz');
+    });
     $('#lunr-search').keyup(debouncedSearch);
     $('#lunr-search').on('search:execute', debouncedSearch);
+    $('#lunr-filter').keyup(function () {
+        $('.e-search-trigger').val('more_horiz');
+    });
     $('#lunr-filter').keyup(debouncedFilter);
 
     // prevent enter key from submitting form

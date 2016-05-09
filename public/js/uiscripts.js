@@ -13,4 +13,8 @@ $(function() {
         $("#filter-type option[data-filter='******']").prop('selected', true).addClass('m-active');
         $("#filter-tools option[data-filter='*******']").prop('selected', true).addClass('m-active');
     });
+
+    // $('#error-close').click(function() {
+    //   $('#error-form').removeClass('m-active');
+    // });
 });
