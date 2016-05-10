@@ -38,7 +38,8 @@
 
       {% if paper.taxonomy.category %}
       <div class="e-result-taxonomy m-category">
-        <p>Category</p>
+        <span class="e-key">Category</span>
+        <span class="e-value">
         {%- for cat in paper.taxonomy.category -%}
             {%- for main_cat in main_categories -%}
               {%- if cat == main_cat.custom_filter -%}
@@ -49,58 +50,68 @@
             {%- endfor -%}
               {{cat}}</a>
         {% endfor %}
+        </span>
       </div>
       {% endif %}
       {% if paper.taxonomy.methodology %}
       <div class="e-result-taxonomy m-methodology">
-        <p>Methodology</p>
+        <span class="e-key">Methodology</span>
+        <span class="e-value">
         {% for m in paper.taxonomy.methodology %}
           <a class="e-tag" href="{{ m | returnID(taxonomy_methodology) }}-{{ m | slug }}.html">{{m}}</a>
         {% endfor %}
+        </span>
       </div>
       {% endif %}
 
       {% if paper.taxonomy.objective %}
       <div class="e-result-taxonomy m-objective">
-        <p>Objective</p>
+        <span class="e-key">Objective</span>
+        <span class="e-value">
         {% for obj in paper.taxonomy.objective %}
           <a class="e-tag" href="{{ obj | returnID(taxonomy_objective) }}-{{ obj | slug }}.html">{{obj}}</a>
         {% endfor %}
+        </span>
       </div>
       {% endif %}
 
 
       {% if paper.type %} 
       <div class="e-result-taxonomy m-type">
-        <p>Type</p>
-        <a class="e-tag" href="{{ paper.type | returnID(type) }}-{{ paper.type }}.html">{{paper.type}}</a>
+        <p><span class="e-key">Type</span>
+        <span class="e-value"><a class="e-tag" href="{{ paper.type | returnID(type) }}-{{ paper.type }}.html">{{paper.type}}</a></span>
       </div>
       {% endif %}
 
       {% if not paper.region[0] == "" %}
       <div class="e-result-taxonomy m-region">
-        <p>Region</p>
+        <p><span class="e-key">Region</span>
+        <span class="e-value">
         {% for r in paper.region %} 
           <a class="e-tag" href="{{ r | returnID(region) }}-{{ r | slug }}.html">{{r}}</a>
         {% endfor %}
+        </span>
       </div>
       {% endif %}
 
       {% if not paper.sector[0] == "" %}
       <div class="e-result-taxonomy m-sector">
-        <p>Sector</p>
+        <p><span class="e-key">Sector</span>
+        <span class="e-value">
         {% for s in paper.sector %}
           <a class="e-tag" href="{{ s | returnID(sector) }}-{{ s | slug }}.html">{{s}}</a>
-        {% endfor %}
+        {% endfor %}</span>
       </div>
       {% endif %}
 
       {% if not paper.tools[0] == "" %}
       <div class="e-result-taxonomy m-tools">
-        <p>Tools</p>
+        <p><span class="e-key">Tools</span>
+        <span class="e-value">
         {% for t in paper.tools %}
           <a class="e-tag" href="{{ t | returnID(tools) }}-{{ t | slug }}.html">{{t}}</a>
         {% endfor %}
+        </span>
       </div>
       {% endif %}
 
