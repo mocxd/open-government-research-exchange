@@ -83,12 +83,12 @@
               <!-- button -->
               <a class="footer-links js-open-modal" href="#">Report Errors</a>
 
-              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {  $('#error-form').html('<h3>Thank you!</h3><p><a class=\u0022b-button\u0022 id=\u0022error-close\u0022 onclick=\u0022$(\u0027#error-form\u0027).removeClass(\u0027m-active\u0027);\u0022 href=\u0022#\u0022>Close</a></p>');  }"></iframe>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
               <!-- modal window -->
-              <div class="b-modal" id="error-form">
-                <div class="e-content">
+              <div class="b-modal" id="error-modal">
+                <div class="e-content" id="error-modal-content">
 
-                  <form class="b-form" action="https://docs.google.com/forms/d/1fszCIYbk831NQ0YOtoM1x30jiGHrsr8DsFAYTgQWUrU/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"><ol role="list" class="ss-question-list" style="padding-left: 0;">
+                  <form class="b-form" id="error-form" action="https://docs.google.com/forms/d/1fszCIYbk831NQ0YOtoM1x30jiGHrsr8DsFAYTgQWUrU/formResponse" method="post" target="hidden_iframe"><ol role="list" class="ss-question-list" style="padding-left: 0;">
 
                     <div class="b-page-section">
                       <div class="row">
