@@ -65,6 +65,9 @@
     <div class="row">
       <form action="#" class="b-form">
         <a class="b-button" id="clear-filter-btn">Clear Filters</a>
+        {% if title == 'All' %}
+        <a class="b-button" id="datasheet-btn">Download Datasheet <i class="material-icons">file_download</i></a>
+        {% endif %}
       </form>
     </div>
   </div>
@@ -89,5 +92,17 @@
 
   {% endfor %}
 </div>
+</div>
+
+<!-- modal window -->
+<div class="b-modal" id="datasheet-modal">
+    <div class="e-content m-center">
+        <h2>Download CSV / JSON Data</h2>
+        <p>
+          <a class="b-button" href="datasheet/all.csv" download>CSV <i class="material-icons">file_download</i></a>
+          <a class="b-button" href="datasheet/all.json" download>JSON <i class="material-icons">file_download</i></a>
+        </p>
+        <p><a class="b-button js-close-modal" href="">Close</a></p>
+    </div>
 </div>
 {% endblock %}
