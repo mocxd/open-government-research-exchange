@@ -226,11 +226,12 @@ option { color: $black; }
 }
 
 #submit-button {
-  margin: 0.75% 0;
+  margin: 10px 0;
 }
 
-.footer-links:hover, #submit-button:hover{
+.footer-links:hover {
   color: $yellow;
+  text-decoration: none;
 }
 
 .b-main-menu .m-disabled {
@@ -238,30 +239,53 @@ option { color: $black; }
   pointer-events: none;
 }
 
-
-.b-fixed-button {
-  display: inline-block;
-  background-color: $black;
-  color: $white;
-  border-radius: 100%;
+.b-report-bug-button {
   position: fixed;
-  visibility: hidden;
-  text-align: center;
-  padding-top: 12px;
-  width: 50px;
-  height: 50px;
-  bottom: 20px;
-  right: 20px;
-  transition: background-color .1s linear;
-  &.m-show {
-    visibility: visible;
-  }
+  right: 30px;
+  bottom: 30px;
+  border-radius: 30px;
+  padding: 17px;
+  width: 60px;
+  height: 60px;
+  background-color: $purple;
+  box-shadow: 2px 2px 5px rgba($black, .4);
+
   &:hover {
-    background-color: $gray-60;
-    color: $white;
-    transition: background-color .1s linear;
+    background-color: $red;    
   }
+  
+
+  i { 
+    color: rgba($white, .4); 
+    font-size: 1.6rem;
+  }
+
+
 }
+
+// .b-fixed-button {
+//   display: inline-block;
+//   background-color: $black;
+//   color: $white;
+//   border-radius: 100%;
+//   position: fixed;
+//   visibility: hidden;
+//   text-align: center;
+//   padding-top: 12px;
+//   width: 50px;
+//   height: 50px;
+//   bottom: 20px;
+//   right: 20px;
+//   transition: background-color .1s linear;
+//   &.m-show {
+//     visibility: visible;
+//   }
+//   &:hover {
+//     background-color: $gray-60;
+//     color: $white;
+//     transition: background-color .1s linear;
+//   }
+// }
 #facebook-logo {
   width: 41px;
 }
@@ -295,6 +319,7 @@ option { color: $black; }
   }
 }
 
+#error-form .b-page-section { padding: 0; }
 
 
 // #entry_580987916::-webkit-input-placeholder, #entry_580987916:-moz-placeholder, #entry_580987916::-moz-placeholder, #entry_580987916:-ms-input-placeholder{
