@@ -121,6 +121,7 @@ $(function() {
         var mapping = mapResults(index.search($(this).val()), papers, 'ref', 'id'), resultsHTML = '';
 
 
+        $( '.b-lunr-results' ).empty();
 
         for (var m in mapping) {
             // inject the result snippet with the mapped data
@@ -139,7 +140,9 @@ $(function() {
             _html = '';
             for (var i in mapping[m].authors) {
                 _html +=
-                '<a class="e-author-link" href="#">' +
+                '<a class="e-author-link" href="' +
+                mapping[m].id + '-' + slug(mapping[m].title)
+                + '.html">' +
                 mapping[m].authors[i]
                 + '</a>' +
                 (i < mapping[m].authors.length-1 ? ', ' : '')
@@ -238,10 +241,12 @@ $(function() {
                $snippet.find('.e-result-extras').append('<i class="material-icons m-closed-access" title="Closed Access">lock_outline</i>')
            }
 
-           resultsHTML += $snippet.prop('outerHTML');
+           var rhtml = $snippet.wrap('<a href="' + mapping[m].id + '-' + slug(mapping[m].title) + '.html" ></a>').parent();
+           // resultsHTML += rhtml.prop('outerHTML');
+           $( '.b-lunr-results' ).append(rhtml);
        }
 
-       $( '.b-lunr-results' ).html(resultsHTML);
+       // $( '.b-lunr-results' ).html(resultsHTML);
        $('.e-search-trigger').val('search');
    };
 
