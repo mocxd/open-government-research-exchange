@@ -525,61 +525,55 @@
 
       
       <div class="e-result-taxonomy m-category">
-        <p>Category</p><a href="64255ed8df78ef71f99dd77a2c048ac5-behavioral-science-and-nudges.html" class="e-tag m-Behavioral Science and Nudges"><a href="8dc91f92aba4f74bc315de931d34dad0-behavioral-research.html" class="e-tag m-Behavioral Science and Nudges">Behavioral Science and Nudges</a>
+        <span class="e-key">Category</span>
+        <span class="e-value"><a href="64255ed8df78ef71f99dd77a2c048ac5-behavioral-science-and-nudges.html" class="e-tag m-behavioral-science-and-nudges"><a href="8dc91f92aba4f74bc315de931d34dad0-behavioral-research.html" class="e-tag m-behavioral-research m-behavioral-science-and-nudges">Behavioral Science and Nudges</a>
         
+        </span>
       </div>
       
       
       <div class="e-result-taxonomy m-methodology">
-        <p>Methodology</p>
+        <span class="e-key">Methodology</span>
+        <span class="e-value">
         
           <a class="e-tag" href="bafdf7a6dcb959e75ef1c3bbf2d2d32e-case-studies.html">Case Studies</a>
         
+        </span>
       </div>
       
 
       
       <div class="e-result-taxonomy m-objective">
-        <p>Objective</p>
+        <span class="e-key">Objective</span>
+        <span class="e-value">
         
           <a class="e-tag" href="eb7a99e5f2566772797e55a8bfb8f0a6-effectiveness.html">Effectiveness</a>
         
+        </span>
       </div>
       
 
 
-      
+       
       <div class="e-result-taxonomy m-type">
-        <p>Type</p>
-        <a class="e-tag" href="821f03288846297c2cf43c34766a38f7-book.html">book</a>
+        <p><span class="e-key">Type</span>
+        <span class="e-value"><a class="e-tag" href="821f03288846297c2cf43c34766a38f7-book.html">book</a></span>
       </div>
       
 
       
       <div class="e-result-taxonomy m-region">
-        <p>Region</p>
-        
+        <p><span class="e-key">Region</span>
+        <span class="e-value">
+         
           <a class="e-tag" href="c24b4f8ef6234f3b8d5bec3763616b49-united-kingdom.html">United Kingdom</a>
         
+        </span>
       </div>
       
 
       
-      <div class="e-result-taxonomy m-sector">
-        <p>Sector</p>
-        
-          <a class="e-tag" href="ca9c491ac66b2c62500882e93f3719a8-false.html"></a>
-        
-      </div>
-      
 
-      
-      <div class="e-result-taxonomy m-tools">
-        <p>Tools</p>
-        
-          <a class="e-tag" href="ca9c491ac66b2c62500882e93f3719a8-false.html"></a>
-        
-      </div>
       
 
       <div class="e-result-extras m-false ">
@@ -1681,10 +1675,64 @@
         <div class="row">
           <div class="large-2 column e-sections">
               <h4>Sections</h4>
-              <a href="./organizations.html" class="footer-links" style="text-decoration:none">Organizations</a>
-              <a href="./categories.html" class="footer-links" style="text-decoration:none">Categories</a>
-              <a href="./about.html" class="footer-links" style="text-decoration:none">About</a>
-              <a href="mailto:ogrx@thegovlab.org" class="footer-links" style="text-decoration:none">Submit Feedback</a>
+              <a href="./organizations.html" class="footer-links">Organizations</a>
+              <a href="./categories.html" class="footer-links">Categories</a>
+              <a href="./about.html" class="footer-links">About</a>
+              <a href="mailto:ogrx@thegovlab.org" class="footer-links">Submit Feedback</a>
+              <!-- <a href="./_error-form.html" class="footer-links" style="text-decoration:none">Report Errors</a> -->
+              <!-- button -->
+              <a class="footer-links js-open-modal" href="#">Report Errors</a>
+
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {  $('#error-form').html('<h3>Thank you!</h3><p><a class=\u0022b-button\u0022 id=\u0022error-close\u0022 onclick=\u0022$(\u0027#error-form\u0027).removeClass(\u0027m-active\u0027);\u0022 href=\u0022#\u0022>Close</a></p>');  }"></iframe>
+              <!-- modal window -->
+              <div class="b-modal" id="error-form">
+                <div class="e-content">
+
+                  <form class="b-form" action="https://docs.google.com/forms/d/1fszCIYbk831NQ0YOtoM1x30jiGHrsr8DsFAYTgQWUrU/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"><ol role="list" class="ss-question-list" style="padding-left: 0;">
+
+                    <div class="b-page-section">
+                      <div class="row">
+                        <h2>Report an Error</h2>
+                        <label for="entry_580987916"></label>
+                            <input type="text" name="entry.580987916" value="" class="ss-q-short" id="entry_580987916" dir="auto" aria-label="Location of Error (which page?)  " aria-required="true" required="" title="url" placeholder="URL Location of Error">
+
+                        <label for="entry_1026309911"><div class="ss-q-title">
+                          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+                          <span class="ss-required-asterisk" aria-hidden="true"></span></div>
+                          <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+                          <textarea name="entry.1026309911" rows="8" cols="0" class="ss-q-long" id="entry_1026309911" dir="auto" aria-label="Describe the problem.  " aria-required="true" required="" placeholder="Describe the Problem"></textarea>
+
+                          <label class="ss-q-item-label" for="entry_261394681"><div class="ss-q-title">
+                          </div>
+                          <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+                          <input type="text" name="entry.261394681" value="" class="ss-q-short" id="entry_261394681" dir="auto" aria-label="Name  " title="" placeholder="Name">
+
+                          <label class="ss-q-item-label" for="entry_1017009444"><div class="ss-q-title">
+                          </div>
+                          <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+                          <input type="text" name="entry.1017009444" value="" class="ss-q-short" id="entry_1017009444" dir="auto" aria-label="Email  " title="" placeholder="Email">
+                      </div>
+                    </div>
+
+                    <input type="hidden" name="draftResponse" value="[,,&quot;6446067227325704188&quot;]
+                  ">
+                    <input type="hidden" name="pageHistory" value="0">
+
+                    <input type="hidden" name="fbzx" value="6446067227325704188">
+
+                    <div class="row">
+                      <input type="submit" name="submit" value="Submit" id="ss-submit">
+                    </div>
+                  </ol>
+
+                  </form></p>
+                  <!-- <p><a class="b-button js-close-modal" href="#">OK</a></p> -->
+                </div>
+              </div>
+
+
+
+
           </div>
 
           <div class="large-4 column">
@@ -1706,14 +1754,21 @@
 
     <div class="b-copyright">
         <div class="row">
-            <div class="large-10 large-centered columns">
+            <div class="large-8 columns">
                 <a class="e-cc-badge" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
                 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> <br> <a href="#">Copyright Infringement Information</a>.
+            </div>
+            <div class="large-4 columns">
+              <div class="b-powered-by">
+                <p>Powered by <a target="_blank" href="http://www.thegovlab.org/"><img src="./img/govlab-logo-white.png" alt="NYU Gov Lab logo" class="e-logo"/></a></p>
+              </div>
             </div>
         </div>
     </div>
 
 <div id="overlay"></div>
+
+<a href="#" class="b-report-bug-button" title="Report Error"><i class="material-icons">bug_report</i></a>
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
