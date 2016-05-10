@@ -17,4 +17,9 @@ $(function() {
     // $('#error-close').click(function() {
     //   $('#error-form').removeClass('m-active');
     // });
+
+    $('#datasheet-btn').click(function () {
+        $('#datasheet-modal').addClass('m-active');
+        $('#overlay').addClass('m-active');
+    });
 });

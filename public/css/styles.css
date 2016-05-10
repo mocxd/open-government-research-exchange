@@ -7834,3 +7834,5 @@ option {
 
 .b-modal {
   color: #008895; }
+  .b-modal .e-content.m-center > * {
+    text-align: center; }
