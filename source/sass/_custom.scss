@@ -271,6 +271,32 @@ option { color: $black; }
 .b-modal{
   color: $teal;
 }
+
+
+.b-powered-by {
+  text-align: right;
+  opacity: .3;
+  transition: opacity .4s ease;
+
+  &:hover {
+    opacity: 1;
+    transition: opacity .4s ease;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .e-logo {
+    width: 110px;
+    margin-left: 15px;
+
+  }
+}
+
+
+
 // #entry_580987916::-webkit-input-placeholder, #entry_580987916:-moz-placeholder, #entry_580987916::-moz-placeholder, #entry_580987916:-ms-input-placeholder{
 //   color: $teal;
 //   text-align: center;
