@@ -829,18 +829,18 @@ gulp.task('cname', function () {
   .pipe(gulp.dest('public'));
 });
 
-gulp.task('data', gulp.series('csv2json', 'json-subsets', 'datasheets', 'lunr', function () {
-  util.log(util.colors.magenta('****'), 'Finished rebuilding data.', util.colors.magenta('****'));
-}));
+// gulp.task('data', gulp.series('csv2json', 'json-subsets', 'datasheets', 'lunr', function () {
+//   util.log(util.colors.magenta('****'), 'Finished rebuilding data.', util.colors.magenta('****'));
+// }));
 
 var buildTasks = ['sass', 'js', 'img', 'nunjucks', 'libCss', 'datasheets', 'lunr', 'cname'];
 gulp.task('build', buildTasks, function () {
   util.log(util.colors.magenta('****'), 'Finished running build tasks:', buildTasks, util.colors.magenta('****'));
 });
 
-gulp.task('rebuild-all', gulp.series('data', 'build', function () {
-  util.log(util.colors.magenta('****'), 'Finished rebuilding everything.', util.colors.magenta('****'));
-}));
+// gulp.task('rebuild-all', gulp.series('data', 'build', function () {
+//   util.log(util.colors.magenta('****'), 'Finished rebuilding everything.', util.colors.magenta('****'));
+// }));
 
 gulp.task('deploy', ['build'], shell.task([
   'git subtree push --prefix public origin gh-pages'
