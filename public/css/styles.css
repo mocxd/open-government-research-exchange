@@ -7859,3 +7859,6 @@ option {
 
 .b-top-nav .e-nav-item {
   cursor: pointer; }
+
+#datasheet-download {
+  font-size: 18px; }
