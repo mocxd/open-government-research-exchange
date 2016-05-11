@@ -327,6 +327,13 @@ option { color: $black; }
 #error-form .b-page-section { padding: 0; }
 
 
+// TEMP POINTER FIX
+.b-top-nav {
+  .e-nav-item {
+    cursor: pointer;
+  }
+}
+
 // #entry_580987916::-webkit-input-placeholder, #entry_580987916:-moz-placeholder, #entry_580987916::-moz-placeholder, #entry_580987916:-ms-input-placeholder{
 //   color: $teal;
 //   text-align: center;
