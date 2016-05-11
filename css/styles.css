@@ -7856,3 +7856,6 @@ option {
 
 #error-form .b-page-section {
   padding: 0; }
+
+.b-top-nav .e-nav-item {
+  cursor: pointer; }
