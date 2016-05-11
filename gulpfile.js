@@ -833,7 +833,7 @@ gulp.task('cname', function () {
 //   util.log(util.colors.magenta('****'), 'Finished rebuilding data.', util.colors.magenta('****'));
 // }));
 
-var buildTasks = ['sass', 'js', 'img', 'nunjucks', 'libCss', 'datasheets', 'lunr', 'cname'];
+var buildTasks = ['sass', 'js', 'img', 'nunjucks', 'libCss', 'lunr', 'cname'];
 gulp.task('build', buildTasks, function () {
   util.log(util.colors.magenta('****'), 'Finished running build tasks:', buildTasks.join(', '), util.colors.magenta('****'));
 });
