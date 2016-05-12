@@ -251,41 +251,19 @@ option { color: $black; }
   box-shadow: 2px 2px 5px rgba($black, .4);
 
   &:hover {
-    background-color: $red;    
+    background-color: $red;
   }
-  
 
-  i { 
-    color: rgba($white, .4); 
+
+  i {
+    color: rgba($white, .4);
     font-size: 1.6rem;
   }
 
 
 }
 
-// .b-fixed-button {
-//   display: inline-block;
-//   background-color: $black;
-//   color: $white;
-//   border-radius: 100%;
-//   position: fixed;
-//   visibility: hidden;
-//   text-align: center;
-//   padding-top: 12px;
-//   width: 50px;
-//   height: 50px;
-//   bottom: 20px;
-//   right: 20px;
-//   transition: background-color .1s linear;
-//   &.m-show {
-//     visibility: visible;
-//   }
-//   &:hover {
-//     background-color: $gray-60;
-//     color: $white;
-//     transition: background-color .1s linear;
-//   }
-// }
+
 #facebook-logo {
   width: 41px;
 }
@@ -335,6 +313,33 @@ option { color: $black; }
 }
 
 #datasheet-download { font-size: 18px; }
+
+.b-fixed-button {
+  display: inline-block;
+  background-color: $black;
+  color: $white;
+  border-radius: 100%;
+  position: fixed;
+  visibility: hidden;
+  text-align: center;
+  padding-top: 18px;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .1s linear;
+  &.m-show {
+    visibility: visible;
+  }
+  &:hover {
+    background-color: $gray-60;
+    color: $white;
+    transition: background-color .1s linear;
+  }
+  &.m-pos-adjust-top-1 {
+    bottom: 130px;
+  }
+}
 
 
 // #entry_580987916::-webkit-input-placeholder, #entry_580987916:-moz-placeholder, #entry_580987916::-moz-placeholder, #entry_580987916:-ms-input-placeholder{
