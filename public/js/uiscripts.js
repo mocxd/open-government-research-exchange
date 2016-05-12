@@ -15,8 +15,9 @@ $(function() {
         $("#filter-tools option[data-filter='*******']").prop('selected', true).addClass('m-active');
     });
 
-    $('#datasheet-btn').click(function () {
-        $('#datasheet-modal').addClass('m-active');
+    $('.js-open-modal-multi').click(function (e) {
+        e.preventDefault();
+        $($(this).attr('data-modal')).addClass('m-active');
         $('#overlay').addClass('m-active');
     });
 
