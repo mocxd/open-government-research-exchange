@@ -274,7 +274,7 @@ problems raised.</p>
               <a href="mailto:ogrx@thegovlab.org" class="footer-links">Submit Feedback</a>
               <!-- <a href="./_error-form.html" class="footer-links" style="text-decoration:none">Report Errors</a> -->
               <!-- button -->
-              <a class="footer-links js-open-modal" href="#">Report Errors</a>
+              <a class="footer-links js-open-modal-multi" data-modal="#error-modal" href="#">Report Errors</a>
 
               <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
               <!-- modal window -->
@@ -361,7 +361,7 @@ problems raised.</p>
 
 <div id="overlay"></div>
 
-<a href="#" class="b-report-bug-button" title="Report Error"><i class="material-icons">bug_report</i></a>
+<a href="#" data-modal="#error-modal" class="b-report-bug-button js-open-modal-multi" title="Report Error"><i class="material-icons">bug_report</i></a>
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>

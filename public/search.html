@@ -80,7 +80,42 @@
 <style>
 .b-search-results .b-lunr-results > a > div {
   display: inline-block;
-
+}
+.b-search-results .b-lunr-results > a > div *:hover {
+  text-decoration: none;
+}
+.b-search-results .b-lunr-results > a > div .e-tag:hover {
+  opacity: 0.7;
+  color: rgba(10, 10, 10, 1);
+  background-color: rgba(51, 51, 51, 0.1);
+}
+.b-search-results .b-lunr-results > a > div .e-tag.m-data-analysis:hover {
+  color: #f0a425;
+  background-color: rgba(243, 180, 75, 0.2);
+}
+.b-search-results .b-lunr-results > a > div .e-tag.m-open-data:hover {
+  color: #008474;
+  background-color: rgba(0, 173, 152, 0.2);
+}
+.b-search-results .b-lunr-results > a > div .e-tag.m-behavioral-science-and-nudges:hover {
+  color: #d73e4d;
+  background-color: rgba(222, 96, 108, 0.2);
+}
+.b-search-results .b-lunr-results > a > div .e-tag.m-civic-technology:hover {
+  color: #9465ab;
+  background-color: rgba(166, 127, 185, 0.2);
+}
+.b-search-results .b-lunr-results > a > div .e-tag.m-citizen-engagement:hover {
+  color: #3f98cb;
+  background-color: rgba(95, 169, 212, 0.2);
+}
+.b-search-results .b-lunr-results > a > div .e-tag.m-expert-networking:hover {
+  color: #5c6780;
+  background-color: rgba(110, 123, 151, 0.2);
+}
+.b-search-results .b-lunr-results > a > div .e-tag.m-labs-and-experimentation:hover {
+  color: #d1b229;
+  background-color: rgba(219, 192, 72, 0.2);
 }
 </style>
 
@@ -125,7 +160,7 @@
               <a href="mailto:ogrx@thegovlab.org" class="footer-links">Submit Feedback</a>
               <!-- <a href="./_error-form.html" class="footer-links" style="text-decoration:none">Report Errors</a> -->
               <!-- button -->
-              <a class="footer-links js-open-modal" href="#">Report Errors</a>
+              <a class="footer-links js-open-modal-multi" data-modal="#error-modal" href="#">Report Errors</a>
 
               <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
               <!-- modal window -->
@@ -212,7 +247,7 @@
 
 <div id="overlay"></div>
 
-<a href="#" class="b-report-bug-button" title="Report Error"><i class="material-icons">bug_report</i></a>
+<a href="#" data-modal="#error-modal" class="b-report-bug-button js-open-modal-multi" title="Report Error"><i class="material-icons">bug_report</i></a>
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>

@@ -151,85 +151,85 @@ $(function() {
 
             $snippet.find('.e-result-authors').html(_html);
 
-            _html = '<p>Category</p>';
+            _html = '<span class="e-key">Category</span>';
             for (var i in mapping[m].taxonomy.category) {
                 _html +=
-                '<a class="e-tag m-' +
+                '<span class="e-tag m-' +
                 slug(mapping[m].taxonomy.category[i])
-                + '" href="#">' +
+                + '">' +
                 mapping[m].taxonomy.category[i]
-                + '</a> '
+                + '</span> '
                 ;
             }
 
             $snippet.find('.e-result-taxonomy.m-category').html(_html);
 
-            _html = '<p>Methodology</p>';
+            _html = '<span class="e-key">Methodology</span>';
             for (var i in mapping[m].taxonomy.methodology) {
                 _html +=
-                '<a class="e-tag m-' +
+                '<span class="e-tag m-' +
                 slug(mapping[m].taxonomy.methodology[i])
-                + '" href="#">' +
+                + '">' +
                 mapping[m].taxonomy.methodology[i]
-                + '</a> '
+                + '</span> '
                 ;
             }
 
             $snippet.find('.e-result-taxonomy.m-methodology').html(_html);
 
-            _html = '<p>Objective</p>';
+            _html = '<span class="e-key">Objective</span>';
             for (var i in mapping[m].taxonomy.objective) {
                 _html +=
-                '<a class="e-tag m-' +
+                '<span class="e-tag m-' +
                 slug(mapping[m].taxonomy.objective[i])
-                + '" href="#">' +
+                + '">' +
                 mapping[m].taxonomy.objective[i]
-                + '</a> '
+                + '</span> '
                 ;
             }
 
             $snippet.find('.e-result-taxonomy.m-objective').html(_html);
 
             $snippet.find('.m-type').html(
-                '<p>Type</p><a class="e-tag" href="#">' +
+                '<span class="e-key">Type</span><span class="e-tag">' +
                 mapping[m].type
-                + '</a>'
+                + '</span>'
                 );
 
-            _html = '<p>Region</p>';
+            _html = '<span class="e-key">Region</span>';
             for (var i in mapping[m].region) {
                 _html +=
-                '<a class="e-tag m-' +
+                '<span class="e-tag m-' +
                 slug(mapping[m].region[i])
-                + '" href="#">' +
+                + '">' +
                 mapping[m].region[i]
-                + '</a> '
+                + '</span> '
                 ;
             }
 
             $snippet.find('.m-region').html(_html);
 
-            _html = '<p>Sector</p>';
+            _html = '<span class="e-key">Sector</span>';
             for (var i in mapping[m].sector) {
                 _html +=
-                '<a class="e-tag m-' +
+                '<span class="e-tag m-' +
                 slug(mapping[m].sector[i])
-                + '" href="#">' +
+                + '">' +
                 mapping[m].sector[i]
-                + '</a> '
+                + '</span> '
                 ;
             }
 
             $snippet.find('.m-sector').html(_html);
 
-            _html = '<p>Tools</p>';
+            _html = '<span class="e-key">Tools</span>';
             for (var i in mapping[m].tools) {
                 _html +=
-                '<a class="e-tag m-' +
+                '<span class="e-tag m-' +
                 slug(mapping[m].tools[i])
-                + '" href="#">' +
+                + '">' +
                 mapping[m].tools[i]
-                + '</a> '
+                + '</span> '
                 ;
             }
 
