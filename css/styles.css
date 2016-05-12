@@ -7862,3 +7862,26 @@ option {
 
 #datasheet-download {
   font-size: 18px; }
+
+.b-fixed-button {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  border-radius: 100%;
+  position: fixed;
+  visibility: hidden;
+  text-align: center;
+  padding-top: 18px;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .1s linear; }
+  .b-fixed-button.m-show {
+    visibility: visible; }
+  .b-fixed-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    transition: background-color .1s linear; }
+  .b-fixed-button.m-pos-adjust-top-1 {
+    bottom: 130px; }
